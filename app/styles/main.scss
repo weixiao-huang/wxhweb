@@ -37,6 +37,12 @@ body {
     line-height: 40px;
     padding-bottom: 19px;
   }
+  ul {
+    li {
+      border: 1px solid gray;
+    }
+    border: 1px solid gray;
+  }
 }
 
 /* Custom page footer */
@@ -52,6 +58,7 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
+  height: 800px;
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
   .btn {
@@ -71,7 +78,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 768px;
   }
 
   /* Remove the padding we set earlier */
@@ -91,4 +98,11 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: gray;
 }
