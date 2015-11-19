@@ -1,8 +1,10 @@
+'use strict';
+
 console.log('Welcome to Weixiao Huang\'s website.');
 
 var drawTree = function(data){
-  var canvas = document.createElement("canvas");
-  var c = canvas.getContext("2d");
+  var canvas = document.createElement('canvas');
+  var c = canvas.getContext('2d');
   canvas.width = 300;
   canvas.height = 1000;
   document.body.appendChild(canvas);
@@ -17,8 +19,8 @@ var drawTree = function(data){
 
   // Initialize Root Branch
   c.lineWidth = 4;
-  c.strokeStyle = "blue";
-  c.fillStyle = "blue";
+  c.strokeStyle = 'blue';
+  c.fillStyle = 'blue';
   c.beginPath();
   c.arc(startX, startY, radius, 0, Math.PI * 2, true);
   c.stroke();
@@ -30,28 +32,28 @@ var drawTree = function(data){
   c.stroke();
 
   c.lineWidth = 4;
-  c.strokeStyle = "pink";
-  c.fillStyle = "pink";
+  c.strokeStyle = 'pink';
+  c.fillStyle = 'pink';
   var X1 = endX, Y1 = startY;
   for (i = 0; i < data.length; i++) {
     for (j = 0; j < data[i].length; j++) {
-      if (j == 0) {
+      if (j === 0) {
         Y1 += 50;
 
-        c.font = "20px Courier New";
-        c.fillStyle = "white";
+        c.font = '20px Courier New';
+        c.fillStyle = 'white';
         c.fillText(data[i][j], X1 + 20, Y1 + 5);
 
         c.beginPath();
-        c.strokeStyle = "pink";
-        c.fillStyle = "pink";
+        c.strokeStyle = 'pink';
+        c.fillStyle = 'pink';
         c.moveTo(X1, Y1);
         c.lineTo(X1 + 25, Y1 + 25);
         c.lineTo(X1 + 25, Y1 + 50);
         c.stroke();
 
-        c.strokeStyle = "blue";
-        c.fillStyle = "blue";
+        c.strokeStyle = 'blue';
+        c.fillStyle = 'blue';
         c.beginPath();
         c.arc(X1, Y1, radius, 0, Math.PI * 2, true);
         c.stroke();
@@ -61,22 +63,22 @@ var drawTree = function(data){
       }
       else {
         Y1 += 50;
-        c.strokeStyle = "pink";
-        c.fillStyle = "pink";
+        c.strokeStyle = 'pink';
+        c.fillStyle = 'pink';
         c.beginPath();
         c.arc(X1, Y1, 8, 0, Math.PI * 2, true);
         c.stroke();
         c.fill();
 
-        c.font = "15px Courier New";
-        c.fillStyle = "white";
+        c.font = '15px Courier New';
+        c.fillStyle = 'white';
         c.fillText(data[i][j], X1 + 20, Y1 + 5);
 
         c.beginPath();
-        c.strokeStyle = "pink";
-        c.fillStyle = "pink";
+        c.strokeStyle = 'pink';
+        c.fillStyle = 'pink';
         c.moveTo(X1, Y1);
-        if (j != data[i].length - 1) {
+        if (j !== data[i].length - 1) {
           c.lineTo(X1, Y1 + 50);
         }
         else {
@@ -89,10 +91,10 @@ var drawTree = function(data){
     }
     X1 -= 25;
   }
-  if (data[data.length-1].length != 1) {
+  if (data[data.length - 1].length !== 1) {
     c.lineWidth = 4;
-    c.strokeStyle = "blue";
-    c.fillStyle = "blue";
+    c.strokeStyle = 'blue';
+    c.fillStyle = 'blue';
     c.beginPath();
     c.arc(endX, endY, radius, 0, Math.PI * 2, true);
     c.stroke();
@@ -100,4 +102,4 @@ var drawTree = function(data){
   }
 };
 
-drawTree([["Music Workshop", "Introduction", "Saxophone", "Harp", "Xylophone", "Achievement", "About Us"],["Lab μ","Introduction", "TUNet"],["STAP 90","Introduction","Function"],["Air Hockey Game", "Something"]]);
+drawTree([['Music Workshop', 'Introduction', 'Saxophone', 'Harp', 'Xylophone', 'Achievement', 'About Us'], ['Lab μ', 'Introduction', 'TUNet'], ['STAP 90', 'Introduction', 'Function'], ['Air Hockey Game', 'Something']]);
