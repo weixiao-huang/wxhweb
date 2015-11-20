@@ -5,10 +5,10 @@ var drawTree = function(data){
   var c = canvas.getContext('2d');
 
   canvas.width = 300;
-  canvas.height = 1000;
-  canvas.style.position = 'absolute';
-  canvas.style.top = document.querySelector('.header').offsetHeight + 'px';
-  canvas.style.left = '0px';
+  canvas.height = $(window).height();
+  //canvas.style.position = 'fixed';
+  //canvas.style.top = $('header').height() + 'px';
+  //canvas.style.left = '0px';
   canvas.style.background = 'gray';
 
   var radius = 8, startX = 50, startY = 50, endX = startX + 25, endY;

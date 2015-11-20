@@ -5,6 +5,8 @@ $icon-font-path: '../fonts/';
 @import "bower_components/fullpage.js/jquery.fullPage.scss";
 // endbower
 
+$sidebar-width: 300px;
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -24,6 +26,17 @@ body {
 .footer {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.navtree {
+  position: fixed;
+  overflow: hidden;
+  top: $navbar-height;
+  left: 0;
+}
+
+main {
+
 }
 
 /* Custom page header */
