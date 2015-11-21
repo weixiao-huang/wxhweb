@@ -4,7 +4,7 @@ var drawTree = function(data){
   var canvas = document.querySelector('.navtree');
   var c = canvas.getContext('2d');
 
-  canvas.width = 300;
+  canvas.width = 400;
   canvas.height = $(window).height();
   canvas.style.background = '#333F50';
 
@@ -17,10 +17,10 @@ var drawTree = function(data){
   }
   endY = startY + 50 + navLength * 50;
 
+  c.beginPath();
   c.lineWidth = 3;
   c.strokeStyle = rootColor;
   c.fillStyle = rootColor;
-  c.beginPath();
   c.arc(startX, startY, radius, 0, Math.PI * 2, true);
   c.stroke();
   c.fill();
@@ -59,6 +59,7 @@ var drawTree = function(data){
         c.lineTo(X1 + 25, Y1 + 25);
         c.lineTo(X1 + 25, Y1 + 50);
         c.stroke();
+        c.closePath();
 
         c.beginPath();
         c.strokeStyle = rootColor;
@@ -117,10 +118,10 @@ var drawTree = function(data){
     X1 -= 25;
   }
   if (data[data.length - 1].length !== 1) {
+    c.beginPath();
     c.lineWidth = 3;
     c.strokeStyle = rootColor;
     c.fillStyle = rootColor;
-    c.beginPath();
     c.arc(endX, endY, radius, 0, Math.PI * 2, true);
     c.stroke();
     c.fill();

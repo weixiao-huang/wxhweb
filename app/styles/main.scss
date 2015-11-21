@@ -2,10 +2,9 @@ $icon-font-path: '../fonts/';
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "bower_components/fullpage.js/jquery.fullPage.scss";
 // endbower
 
-$sidebar-width: 300px;
+$sidebar-width: 400px;
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -35,8 +34,9 @@ body {
   left: 0;
 }
 
-main {
-
+.scroll {
+  height: 500px;
+  width: 500px;
 }
 
 /* Custom page header */
@@ -60,9 +60,8 @@ main {
 
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+  font: 30px/500px "Microsoft Yahei";
+  text-align: center;
 }
 
 .container-narrow > hr {
@@ -94,13 +93,6 @@ main {
   /* Space out the masthead */
   .header {
     margin: auto;
-  }
-
-  #fullpage {
-    width: 84%;
-    .section {
-      background: lightseagreen;
-    }
   }
 }
 

@@ -4,7 +4,7 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
-    "fullpage.js": "~2.7.4"
+    "Scrollify": "~0.1.11"
   },
   "overrides": {
     "bootstrap-sass": {
