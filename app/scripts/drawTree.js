@@ -1,7 +1,5 @@
 'use strict';
 
-var positionX = [], positionY = [], index = 0;
-
 var drawTree = function(data){
   var canvas = document.querySelector('.navtree');
   var c = canvas.getContext('2d');
@@ -12,6 +10,7 @@ var drawTree = function(data){
 
   var radius = 8, startX = 50, startY = 50, endX = startX + 25, endY;
   var rootColor = '#5B9BD5', branchColor = '#FF3399', circleColor = 'black';
+  var positionX = [], positionY = [], index = 0;
 
   var i, j, navLength = 0;
   for (i = 0; i < data.length; i++) {
@@ -125,6 +124,7 @@ var drawTree = function(data){
     }
     X1 -= 25;
   }
+  
   if (data[data.length - 1].length !== 1) {
     c.beginPath();
     c.lineWidth = 3;
@@ -142,29 +142,29 @@ var drawTree = function(data){
     c.stroke();
     c.closePath();
   }
-};
 
-$('.navtree').on({
-  mousemove: function (e) {
-    var xx = e.pageX - $(this).offset().left;
-    var yy = e.pageY - $(this).offset().top;
-    var i;
-    $(this).css({cursor: "default"});
-    for (i = 0; i < positionX.length; i++) {
-      if (Math.abs(xx - positionX[i]) <= 8 && Math.abs(yy - positionY[i]) <= 8) {
-        $(this).css({cursor: "pointer"});
+  $('.navtree').on({
+    mousemove: function (e) {
+      var xx = e.pageX - $(this).offset().left;
+      var yy = e.pageY - $(this).offset().top;
+      var i;
+      $(this).css({cursor: "default"});
+      for (i = 0; i < positionX.length; i++) {
+        if (Math.abs(xx - positionX[i]) <= 8 && Math.abs(yy - positionY[i]) <= 8) {
+          $(this).css({cursor: "pointer"});
+        }
+      }
+    },
+    click: function (e) {
+      var xx = e.pageX - $(this).offset().left;
+      var yy = e.pageY - $(this).offset().top;
+      var i;
+      $(this).css({cursor: "default"});
+      for (i = 0; i < positionX.length; i++) {
+        if (Math.abs(xx - positionX[i]) <= 8 && Math.abs(yy - positionY[i]) <= 8) {
+          console.log("Click!");
+        }
       }
     }
-  },
-  click: function (e) {
-    var xx = e.pageX - $(this).offset().left;
-    var yy = e.pageY - $(this).offset().top;
-    var i;
-    $(this).css({cursor: "default"});
-    for (i = 0; i < positionX.length; i++) {
-      if (Math.abs(xx - positionX[i]) <= 8 && Math.abs(yy - positionY[i]) <= 8) {
-        console.log("Click!");
-      }
-    }
-  }
-});
+  });
+};
