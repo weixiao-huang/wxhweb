@@ -1,5 +1,7 @@
 'use strict';
 
+var positionX = [], positionY = [], index = 0;
+
 var drawTree = function(data){
   var canvas = document.querySelector('.navtree');
   var c = canvas.getContext('2d');
@@ -76,6 +78,9 @@ var drawTree = function(data){
         c.stroke();
         c.closePath();
 
+        positionX[index] = X1;
+        positionY[index++] = Y1;
+
         X1 += 25;
       }
       else {
@@ -113,6 +118,9 @@ var drawTree = function(data){
         c.arc(X1, Y1, radius + 2, 0, Math.PI * 2, true);
         c.stroke();
         c.closePath();
+
+        positionX[index] = X1;
+        positionY[index++] = Y1;
       }
     }
     X1 -= 25;
@@ -135,3 +143,28 @@ var drawTree = function(data){
     c.closePath();
   }
 };
+
+$('.navtree').on({
+  mousemove: function (e) {
+    var xx = e.pageX - $(this).offset().left;
+    var yy = e.pageY - $(this).offset().top;
+    var i;
+    $(this).css({cursor: "default"});
+    for (i = 0; i < positionX.length; i++) {
+      if (Math.abs(xx - positionX[i]) <= 8 && Math.abs(yy - positionY[i]) <= 8) {
+        $(this).css({cursor: "pointer"});
+      }
+    }
+  },
+  click: function (e) {
+    var xx = e.pageX - $(this).offset().left;
+    var yy = e.pageY - $(this).offset().top;
+    var i;
+    $(this).css({cursor: "default"});
+    for (i = 0; i < positionX.length; i++) {
+      if (Math.abs(xx - positionX[i]) <= 8 && Math.abs(yy - positionY[i]) <= 8) {
+        console.log("Click!");
+      }
+    }
+  }
+});
