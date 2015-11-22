@@ -10,7 +10,7 @@ var drawTree = function(data){
 
   var radius = 8, startX = 50, startY = 50, endX = startX + 25, endY;
   var rootColor = '#5B9BD5', branchColor = '#FF3399', circleColor = 'black';
-  var positionX = [], positionY = [], index = 0;
+  var positionX = [[]], positionY = [[]];
 
   var i, j, navLength = 0;
   for (i = 0; i < data.length; i++) {
@@ -77,8 +77,8 @@ var drawTree = function(data){
         c.stroke();
         c.closePath();
 
-        positionX[index] = X1;
-        positionY[index++] = Y1;
+        positionX[i][j] = X1;
+        positionY[i][j] = Y1;
 
         X1 += 25;
       }
@@ -118,13 +118,13 @@ var drawTree = function(data){
         c.stroke();
         c.closePath();
 
-        positionX[index] = X1;
-        positionY[index++] = Y1;
+        positionX[i][j] = X1;
+        positionY[i][j] = Y1;
       }
     }
     X1 -= 25;
   }
-  
+
   if (data[data.length - 1].length !== 1) {
     c.beginPath();
     c.lineWidth = 3;
@@ -149,9 +149,11 @@ var drawTree = function(data){
       var yy = e.pageY - $(this).offset().top;
       var i;
       $(this).css({cursor: "default"});
-      for (i = 0; i < positionX.length; i++) {
-        if (Math.abs(xx - positionX[i]) <= 8 && Math.abs(yy - positionY[i]) <= 8) {
-          $(this).css({cursor: "pointer"});
+      for (i = 0; i < data.length; i++) {
+        for (j = 0; j < data[i].length; j++) {
+          if (Math.abs(xx - positionX[i][j]) <= 8 && Math.abs(yy - positionY[i][j]) <= 8) {
+            $(this).css({cursor: "pointer"});
+          }
         }
       }
     },
@@ -160,9 +162,12 @@ var drawTree = function(data){
       var yy = e.pageY - $(this).offset().top;
       var i;
       $(this).css({cursor: "default"});
-      for (i = 0; i < positionX.length; i++) {
-        if (Math.abs(xx - positionX[i]) <= 8 && Math.abs(yy - positionY[i]) <= 8) {
-          console.log("Click!");
+      for (i = 0; i < data.length; i++) {
+        for (j = 0; j < data[i].length; j++) {
+          if (Math.abs(xx - positionX[i][j]) <= 8 && Math.abs(yy - positionY[i][j]) <= 8) {
+            //console.log("Click!");
+            window.location.href = '#' + data[i][j];
+          }
         }
       }
     }
