@@ -94,11 +94,11 @@ var drawTree = function(data){
 
         c.font = '18px Courier New';
         c.fillStyle = 'white';
-        if (data[i][j].substring(0, 4) === 'Intro') {
-          c.fillText(data[i][j], X1 + 20, Y1 + 5);
+        if (data[i][j].substring(0, 5) === 'Intro') {
+          c.fillText(data[i][j].substring(0, data[i][j].length - 1), X1 + 20, Y1 + 5);
         }
         else {
-          c.fillText(data[i][j].substring(0, data[i][j].length - 1), X1 + 20, Y1 + 5);
+          c.fillText(data[i][j], X1 + 20, Y1 + 5);
         }
 
         c.beginPath();
