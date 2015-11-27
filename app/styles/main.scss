@@ -118,3 +118,16 @@ body {
 .s4 {
   background: darkslateblue;
 }
+
+.s5 {
+  background: orangered;
+}
+
+.s6 {
+  background: #00b3ee;
+}
+
+h1:target,
+h2:target {
+  padding-top: $navbar-height;
+}
