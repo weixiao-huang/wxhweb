@@ -11,6 +11,7 @@ var drawTree = function(data){
   var radius = 8, startX = 50, startY = 50, endX = startX + 25, endY;
   var rootColor = '#5B9BD5', branchColor = '#FF3399', circleColor = 'black';
   var positionX = [[], [], [], []], positionY = [[], [], [], []];
+  var oldI = 0, oldJ = 0;
 
   var i, j, navLength = 0;
   for (i = 0; i < data.length; i++) {
@@ -148,6 +149,29 @@ var drawTree = function(data){
     c.closePath();
   }
 
+  c.beginPath();
+  c.strokeStyle = '#666666';
+  c.fillStyle = '#666666';
+  c.arc(positionX[0][0], positionY[0][0], radius + 2, 0, Math.PI * 2, true);
+  c.stroke();
+  c.fill();
+  c.closePath();
+
+  c.beginPath();
+  c.strokeStyle = 'white';
+  c.fillStyle = 'white';
+  c.arc(positionX[0][0], positionY[0][0], radius - 3, 0, Math.PI * 2, true);
+  c.stroke();
+  c.fill();
+  c.closePath();
+
+  c.beginPath();
+  c.strokeStyle = circleColor;
+  c.lineWidth = 1;
+  c.arc(positionX[0][0], positionY[0][0], radius + 2, 0, Math.PI * 2, true);
+  c.stroke();
+  c.closePath();
+
   var isDragging = false, oldY = 0, dy = 0;
   $('.navtree').on({
     mousedown: function(e) {
@@ -163,6 +187,13 @@ var drawTree = function(data){
         c.clearRect(0, 0, canvas.width, canvas.height);
         startY = startY + dy;
         endY = startY + 50 + navLength * 50;
+
+        if (endY <= 100) {
+          startY = startY - dy;
+        }
+        else if (startY >= canvas.height - 150) {
+          startY = canvas.height - 150;
+        }
 
         c.beginPath();
         c.lineWidth = 3;
@@ -293,6 +324,29 @@ var drawTree = function(data){
           c.stroke();
           c.closePath();
         }
+
+        c.beginPath();
+        c.strokeStyle = '#666666';
+        c.fillStyle = '#666666';
+        c.arc(positionX[oldI][oldJ], positionY[oldI][oldJ], radius + 2, 0, Math.PI * 2, true);
+        c.stroke();
+        c.fill();
+        c.closePath();
+
+        c.beginPath();
+        c.strokeStyle = 'white';
+        c.fillStyle = 'white';
+        c.arc(positionX[oldI][oldJ], positionY[oldI][oldJ], radius - 3, 0, Math.PI * 2, true);
+        c.stroke();
+        c.fill();
+        c.closePath();
+
+        c.beginPath();
+        c.strokeStyle = circleColor;
+        c.lineWidth = 1;
+        c.arc(positionX[oldI][oldJ], positionY[oldI][oldJ], radius + 2, 0, Math.PI * 2, true);
+        c.stroke();
+        c.closePath();
       }
       else {
         var xx = e.pageX - $(this).offset().left;
@@ -326,34 +380,14 @@ var drawTree = function(data){
     }
   });
 
-  c.beginPath();
-  c.strokeStyle = '#666666';
-  c.fillStyle = '#666666';
-  c.arc(positionX[0][0], positionY[0][0], radius + 2, 0, Math.PI * 2, true);
-  c.stroke();
-  c.fill();
-  c.closePath();
-
-  c.beginPath();
-  c.strokeStyle = 'white';
-  c.fillStyle = 'white';
-  c.arc(positionX[0][0], positionY[0][0], radius - 3, 0, Math.PI * 2, true);
-  c.stroke();
-  c.fill();
-  c.closePath();
-
-  c.beginPath();
-  c.strokeStyle = circleColor;
-  c.lineWidth = 1;
-  c.arc(positionX[0][0], positionY[0][0], radius + 2, 0, Math.PI * 2, true);
-  c.stroke();
-  c.closePath();
   window.onhashchange = function() {
     var ThisID = window.location.hash;
     var i3, j3;
     for (i3 = 0; i3 < data.length; i3++) {
       for (j3 = 0; j3 < data[i3].length; j3++) {
         if ('#' + data[i3][j3] === ThisID) {
+          oldI = i3;
+          oldJ = j3;
           c.beginPath();
           c.strokeStyle = '#666666';
           c.fillStyle = '#666666';
