@@ -43,30 +43,6 @@
         </div>
       </nav>
 
-      <canvas class="navtree"></canvas>
-
-      <div id="fullpage">
-        <div class="section s1">
-            <h1>INTRODUCTION</h1>
-            <h2>Always be Creative</h2>
-        </div>
-        <div class="section s2">
-            <h2>Statement</h2>
-        </div>
-        <div class="section s3">
-            <h2>Interests</h2>
-        </div>
-        <div class="section s4">
-            <h2>Skills</h2>
-        </div>
-        <div class="section s5">
-            <h2>Projects</h2>
-        </div>
-        <div class="section s6">
-            <h2>Activities</h2>
-        </div>
-      </div>
-
       <div class="footer">
         <p>♥Powered By Lab μ Web Group</p>
       </div>
@@ -112,14 +88,7 @@
     <script src="scripts/drawTree.js"></script>
     <!-- endbuild -->
     <script>
-      $(document).ready(function() {
-        $('#fullpage').fullpage({
-          anchors:['Introduction', 'Statement', 'Interests', 'Skills', 'Projects', 'Activities']
-        });
-      });
-      drawTree([
-        ['Introduction', 'Statement', 'Interests', 'Skills', 'Projects', 'Activities']
-      ]);
+
     </script>
   </body>
 </html>

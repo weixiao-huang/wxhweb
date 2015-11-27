@@ -46,25 +46,21 @@
       <canvas class="navtree"></canvas>
 
       <div id="fullpage">
-        <div class="section s1">
-            <h1>INTRODUCTION</h1>
-            <h2>Always be Creative</h2>
-        </div>
-        <div class="section s2">
-            <h2>Statement</h2>
-        </div>
-        <div class="section s3">
-            <h2>Interests</h2>
-        </div>
-        <div class="section s4">
-            <h2>Skills</h2>
-        </div>
-        <div class="section s5">
-            <h2>Projects</h2>
-        </div>
-        <div class="section s6">
-            <h2>Activities</h2>
-        </div>
+        <div class="section s1">Section 1</div>
+        <div class="section s2">Section 2</div>
+        <div class="section s3">Section 3</div>
+        <div class="section s4">Section 4</div>
+        <div class="section s5">Section 5</div>
+        <div class="section s6">Section 6</div>
+        <div class="section s7">Section 7</div>
+        <div class="section s8">Section 8</div>
+        <div class="section s9">Section 9</div>
+        <div class="section s10">Section 10</div>
+        <div class="section s11">Section 11</div>
+        <div class="section s12">Section 12</div>
+        <div class="section s13">Section 13</div>
+        <div class="section s14">Section 14</div>
+        <div class="section s15">Section 15</div>
       </div>
 
       <div class="footer">
@@ -114,11 +110,17 @@
     <script>
       $(document).ready(function() {
         $('#fullpage').fullpage({
-          anchors:['Introduction', 'Statement', 'Interests', 'Skills', 'Projects', 'Activities']
+          anchors:['Music Workshop', 'Introduction0', 'Saxophone', 'Harp', 'Xylophone', 'Achievement', 'About us',
+            'Lab μ', 'Introduction1', 'TUNet-pc', 'Creative Competition',
+            'STAP 90', 'Introduction2', 'Function',
+            'Air Hockey Game']
         });
       });
       drawTree([
-        ['Introduction', 'Statement', 'Interests', 'Skills', 'Projects', 'Activities']
+        ['Music Workshop', 'Introduction0', 'Saxophone', 'Harp', 'Xylophone', 'Achievement', 'About us'],
+        ['Lab μ', 'Introduction1', 'TUNet-pc', 'Creative Competition'],
+        ['STAP 90', 'Introduction2', 'Function'],
+        ['Air Hockey Game']
       ]);
     </script>
   </body>

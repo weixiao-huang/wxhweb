@@ -10,7 +10,7 @@ var drawTree = function(data){
 
   var radius = 8, startX = 50, startY = 50, endX = startX + 25, endY;
   var rootColor = '#5B9BD5', branchColor = '#FF3399', circleColor = 'black';
-  var positionX = [[]], positionY = [[]];
+  var positionX = [[], [], [], []], positionY = [[], [], [], []];
 
   var i, j, navLength = 0;
   for (i = 0; i < data.length; i++) {
@@ -94,7 +94,12 @@ var drawTree = function(data){
 
         c.font = '18px Courier New';
         c.fillStyle = 'white';
-        c.fillText(data[i][j], X1 + 20, Y1 + 5);
+        if (data[i][j].substring(0, 4) === 'Intro') {
+          c.fillText(data[i][j], X1 + 20, Y1 + 5);
+        }
+        else {
+          c.fillText(data[i][j].substring(0, data[i][j].length - 1), X1 + 20, Y1 + 5);
+        }
 
         c.beginPath();
         c.lineWidth = 3;
@@ -171,9 +176,31 @@ var drawTree = function(data){
       }
     }
   });
+
+  c.beginPath();
+  c.strokeStyle = '#666666';
+  c.fillStyle = '#666666';
+  c.arc(positionX[0][0], positionY[0][0], radius + 2, 0, Math.PI * 2, true);
+  c.stroke();
+  c.fill();
+  c.closePath();
+
+  c.beginPath();
+  c.strokeStyle = 'white';
+  c.fillStyle = 'white';
+  c.arc(positionX[0][0], positionY[0][0], radius - 3, 0, Math.PI * 2, true);
+  c.stroke();
+  c.fill();
+  c.closePath();
+
+  c.beginPath();
+  c.strokeStyle = circleColor;
+  c.lineWidth = 1;
+  c.arc(positionX[0][0], positionY[0][0], radius + 2, 0, Math.PI * 2, true);
+  c.stroke();
+  c.closePath();
   window.onhashchange = function() {
     var ThisID = window.location.hash;
-    console.log(ThisID);
     var i3, j3;
     for (i3 = 0; i3 < data.length; i3++) {
       for (j3 = 0; j3 < data[i3].length; j3++) {
@@ -201,10 +228,10 @@ var drawTree = function(data){
           c.stroke();
           c.closePath();
         }
-        else if (j3 !== 0) {
+        else if (j3 === 0) {
           c.beginPath();
-          c.strokeStyle = branchColor;
-          c.fillStyle = branchColor;
+          c.strokeStyle = rootColor;
+          c.fillStyle = rootColor;
           c.arc(positionX[i3][j3], positionY[i3][j3], radius, 0, Math.PI * 2, true);
           c.stroke();
           c.fill();
@@ -219,8 +246,8 @@ var drawTree = function(data){
         }
         else {
           c.beginPath();
-          c.strokeStyle = rootColor;
-          c.fillStyle = rootColor;
+          c.strokeStyle = branchColor;
+          c.fillStyle = branchColor;
           c.arc(positionX[i3][j3], positionY[i3][j3], radius, 0, Math.PI * 2, true);
           c.stroke();
           c.fill();
@@ -238,4 +265,4 @@ var drawTree = function(data){
   };
 };
 
-drawTree();
+drawTree([[]]);

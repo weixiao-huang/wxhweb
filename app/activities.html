@@ -46,25 +46,13 @@
       <canvas class="navtree"></canvas>
 
       <div id="fullpage">
-        <div class="section s1">
-            <h1>INTRODUCTION</h1>
-            <h2>Always be Creative</h2>
-        </div>
-        <div class="section s2">
-            <h2>Statement</h2>
-        </div>
-        <div class="section s3">
-            <h2>Interests</h2>
-        </div>
-        <div class="section s4">
-            <h2>Skills</h2>
-        </div>
-        <div class="section s5">
-            <h2>Projects</h2>
-        </div>
-        <div class="section s6">
-            <h2>Activities</h2>
-        </div>
+        <div class="section s1">Section 1</div>
+        <div class="section s2">Section 2</div>
+        <div class="section s3">Section 3</div>
+        <div class="section s4">Section 4</div>
+        <div class="section s5">Section 5</div>
+        <div class="section s6">Section 6</div>
+        <div class="section s7">Section 7</div>
       </div>
 
       <div class="footer">
@@ -114,11 +102,15 @@
     <script>
       $(document).ready(function() {
         $('#fullpage').fullpage({
-          anchors:['Introduction', 'Statement', 'Interests', 'Skills', 'Projects', 'Activities']
+          anchors:[
+            'Public', 'SAEPA', 'Teaching', 'SSLP',
+            'Performance', '2014 Student Festival', '2015 Student Festival'
+          ]
         });
       });
       drawTree([
-        ['Introduction', 'Statement', 'Interests', 'Skills', 'Projects', 'Activities']
+        ['Public', 'SAEPA', 'Teaching', 'SSLP'],
+        ['Performance', '2014 Student Festival', '2015 Student Festival']
       ]);
     </script>
   </body>
