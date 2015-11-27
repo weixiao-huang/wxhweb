@@ -11,6 +11,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/fullpage.js/jquery.fullPage.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -44,6 +45,13 @@
 
       <canvas class="navtree"></canvas>
 
+      <div id="fullpage">
+        <div class="section s1">Some section</div>
+        <div class="section s2">Some section</div>
+        <div class="section s3">Some section</div>
+        <div class="section s4">Some section</div>
+      </div>
+
       <div class="footer">
         <p>♥Powered By Lab μ Web Group</p>
       </div>
@@ -63,6 +71,9 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/Scrollify/jquery.scrollify.js"></script>
+    <script src="/bower_components/fullpage.js/jquery.fullPage.js"></script>
+    <script src="/bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
+    <script src="/bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -86,6 +97,9 @@
     <script src="scripts/drawTree.js"></script>
     <!-- endbuild -->
     <script>
+      $(document).ready(function() {
+        $('#fullpage').fullpage();
+      });
       drawTree([['Introduction', 'Statement', 'Interests', 'Skills', 'Projects', 'Activities']]);
     </script>
   </body>

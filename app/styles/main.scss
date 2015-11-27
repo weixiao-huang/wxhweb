@@ -2,6 +2,7 @@ $icon-font-path: '../fonts/';
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/fullpage.js/jquery.fullPage.scss";
 // endbower
 
 $sidebar-width: 400px;
@@ -96,3 +97,23 @@ body {
   }
 }
 
+.section {
+  margin-left: $sidebar-width;
+  padding-top: $navbar-height;
+}
+
+.s1 {
+  background: black;
+}
+
+.s2 {
+  background: red;
+}
+
+.s3 {
+  background: greenyellow;
+}
+
+.s4 {
+  background: darkslateblue;
+}
