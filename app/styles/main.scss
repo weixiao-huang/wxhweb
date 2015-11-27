@@ -29,6 +29,7 @@ body {
 }
 
 .navtree {
+  z-index: 100;
   position: fixed;
   overflow: hidden;
   top: $navbar-height;
