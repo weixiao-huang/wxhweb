@@ -160,7 +160,7 @@ var drawTree = function(data){
     click: function (e) {
       var xx = e.pageX - $(this).offset().left;
       var yy = e.pageY - $(this).offset().top;
-      var i;
+      var i, j;
       $(this).css({cursor: "default"});
       for (i = 0; i < data.length; i++) {
         for (j = 0; j < data[i].length; j++) {
@@ -172,4 +172,70 @@ var drawTree = function(data){
       }
     }
   });
+  window.onhashchange = function() {
+    var ThisID = window.location.hash;
+    console.log(ThisID);
+    var i, j;
+    outerLoop:
+    for (i = 0; i < data.length; i++) {
+      for (j = 0; j < data[i].length; j++) {
+        if ('#' + data[i][j] === ThisID) {
+          c.beginPath();
+          c.strokeStyle = '#666666';
+          c.fillStyle = '#666666';
+          c.arc(positionX[i][j], positionY[i][j], radius + 2, 0, Math.PI * 2, true);
+          c.stroke();
+          c.fill();
+          c.closePath();
+
+          c.beginPath();
+          c.strokeStyle = 'white';
+          c.fillStyle = 'white';
+          c.arc(positionX[i][j], positionY[i][j], radius - 3, 0, Math.PI * 2, true);
+          c.stroke();
+          c.fill();
+          c.closePath();
+
+          c.beginPath();
+          c.strokeStyle = circleColor;
+          c.lineWidth = 1;
+          c.arc(positionX[i][j], positionY[i][j], radius + 2, 0, Math.PI * 2, true);
+          c.stroke();
+          c.closePath();
+        }
+        else if (j != 0) {
+          c.beginPath();
+          c.strokeStyle = branchColor;
+          c.fillStyle = branchColor;
+          c.arc(positionX[i][j], positionY[i][j], radius, 0, Math.PI * 2, true);
+          c.stroke();
+          c.fill();
+          c.closePath();
+
+          c.beginPath();
+          c.strokeStyle = circleColor;
+          c.lineWidth = 1;
+          c.arc(positionX[i][j], positionY[i][j], radius + 2, 0, Math.PI * 2, true);
+          c.stroke();
+          c.closePath();
+        }
+        else {
+          c.beginPath();
+          c.strokeStyle = rootColor;
+          c.fillStyle = rootColor;
+          c.arc(positionX[i][j], positionY[i][j], radius, 0, Math.PI * 2, true);
+          c.stroke();
+          c.fill();
+          c.closePath();
+
+          c.beginPath();
+          c.strokeStyle = circleColor;
+          c.lineWidth = 1;
+          c.arc(positionX[i][j], positionY[i][j], radius + 2, 0, Math.PI * 2, true);
+          c.stroke();
+          c.closePath();
+        }
+      }
+    }
+  }
 };
