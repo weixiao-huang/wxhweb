@@ -176,7 +176,6 @@ var drawTree = function(data){
     var ThisID = window.location.hash;
     console.log(ThisID);
     var i, j;
-    outerLoop:
     for (i = 0; i < data.length; i++) {
       for (j = 0; j < data[i].length; j++) {
         if ('#' + data[i][j] === ThisID) {
