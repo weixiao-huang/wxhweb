@@ -220,29 +220,29 @@ var drawTree = function(data){
         c.stroke();
         c.closePath();
 
-        var X1 = endX, Y1 = startY;
+        var X2 = endX, Y2 = startY;
         for (i = 0; i < data.length; i++) {
           for (j = 0; j < data[i].length; j++) {
-            Y1 += 50;
+            Y2 += 50;
             if (j === 0) {
               c.font = '24px Courier New';
               c.fillStyle = 'white';
-              c.fillText(data[i][j], X1 + 20, Y1 + 5);
+              c.fillText(data[i][j], X2 + 20, Y2 + 5);
 
               c.beginPath();
               c.lineWidth = 3;
               c.strokeStyle = branchColor;
               c.fillStyle = branchColor;
-              c.moveTo(X1, Y1);
-              c.lineTo(X1 + 25, Y1 + 25);
-              c.lineTo(X1 + 25, Y1 + 50);
+              c.moveTo(X2, Y2);
+              c.lineTo(X2 + 25, Y2 + 25);
+              c.lineTo(X2 + 25, Y2 + 50);
               c.stroke();
               c.closePath();
 
               c.beginPath();
               c.strokeStyle = rootColor;
               c.fillStyle = rootColor;
-              c.arc(X1, Y1, radius, 0, Math.PI * 2, true);
+              c.arc(X2, Y2, radius, 0, Math.PI * 2, true);
               c.stroke();
               c.fill();
               c.closePath();
@@ -250,21 +250,21 @@ var drawTree = function(data){
               c.beginPath();
               c.strokeStyle = circleColor;
               c.lineWidth = 1;
-              c.arc(X1, Y1, radius + 2, 0, Math.PI * 2, true);
+              c.arc(X2, Y2, radius + 2, 0, Math.PI * 2, true);
               c.stroke();
               c.closePath();
 
-              positionX[i][j] = X1;
-              positionY[i][j] = Y1;
+              positionX[i][j] = X2;
+              positionY[i][j] = Y2;
 
-              X1 += 25;
+              X2 += 25;
             }
             else {
               c.beginPath();
               c.lineWidth = 3;
               c.strokeStyle = branchColor;
               c.fillStyle = branchColor;
-              c.arc(X1, Y1, 8, 0, Math.PI * 2, true);
+              c.arc(X2, Y2, 8, 0, Math.PI * 2, true);
               c.stroke();
               c.fill();
               c.closePath();
@@ -272,23 +272,23 @@ var drawTree = function(data){
               c.font = '18px Courier New';
               c.fillStyle = 'white';
               if (data[i][j].substring(0, 5) === 'Intro') {
-                c.fillText(data[i][j].substring(0, data[i][j].length - 1), X1 + 20, Y1 + 5);
+                c.fillText(data[i][j].substring(0, data[i][j].length - 1), X2 + 20, Y2 + 5);
               }
               else {
-                c.fillText(data[i][j], X1 + 20, Y1 + 5);
+                c.fillText(data[i][j], X2 + 20, Y2 + 5);
               }
 
               c.beginPath();
               c.lineWidth = 3;
               c.strokeStyle = branchColor;
               c.fillStyle = branchColor;
-              c.moveTo(X1, Y1);
+              c.moveTo(X2, Y2);
               if (j !== data[i].length - 1) {
-                c.lineTo(X1, Y1 + 50);
+                c.lineTo(X2, Y2 + 50);
               }
               else {
-                c.lineTo(X1, Y1 + 25);
-                c.lineTo(X1 - 25, Y1 + 50);
+                c.lineTo(X2, Y2 + 25);
+                c.lineTo(X2 - 25, Y2 + 50);
               }
               c.stroke();
               c.closePath();
@@ -296,15 +296,15 @@ var drawTree = function(data){
               c.beginPath();
               c.strokeStyle = circleColor;
               c.lineWidth = 1;
-              c.arc(X1, Y1, radius + 2, 0, Math.PI * 2, true);
+              c.arc(X2, Y2, radius + 2, 0, Math.PI * 2, true);
               c.stroke();
               c.closePath();
 
-              positionX[i][j] = X1;
-              positionY[i][j] = Y1;
+              positionX[i][j] = X2;
+              positionY[i][j] = Y2;
             }
           }
-          X1 -= 25;
+          X2 -= 25;
         }
 
         if (data[data.length - 1].length !== 1) {
@@ -362,7 +362,7 @@ var drawTree = function(data){
         }
       }
     },
-    mouseup: function(e) {
+    mouseup: function() {
       isDragging = false;
     },
     click: function (e) {
