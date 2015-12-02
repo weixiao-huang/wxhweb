@@ -106,7 +106,7 @@ body {
 }
 
 .section {
-  margin-left: $sidebar-width;
+  margin-left: $sidebar-width - 15;
   padding-top: $navbar-height;
 }
 
@@ -174,7 +174,6 @@ h2:target {
 }
 
 .pro {
-  margin-left: 25%;
 }
 
 .ptitle {
