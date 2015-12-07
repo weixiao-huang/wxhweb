@@ -9,7 +9,7 @@ $sidebar-width: 400px;
 
 @font-face {
     font-family: bgothm;
-    src: url(../ref/fonts/bgothm.ttf);
+    src: url(../fonts/bgothm.ttf);
 }
 
 @font-face {
@@ -18,8 +18,8 @@ $sidebar-width: 400px;
 }
 
 @font-face {
-    font-family: futura;
-    src: url(../ref/fonts/futura.ttf)
+    font-family: helvetica;
+    src: url(../fonts/helveticaneueltstd-th.otf)
 }
 
 .navbar {
@@ -56,7 +56,7 @@ $sidebar-width: 400px;
 }
 
 .container {
-	font-family: futura;
+	font-family: helvetica;
 }
 
 .footer {

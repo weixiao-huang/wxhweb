@@ -47,8 +47,8 @@
 
 .mw > a {
   padding: 200px 0;
-  width: 95%;
-  background: url(../imgs/mw/mw.jpg) no-repeat center center;
+  width: 100%;
+  background: url(../images/mw/mw.jpg) no-repeat center center;
   @include backgroundm
   .mwtext1 {
     color: black;
@@ -64,26 +64,26 @@
 
 .labmu > a {
   padding: 150px 0;
-  width: 90%;
-  background: url(../imgs/labmu/labmu.jpg) no-repeat center center;
+  width: 100%;
+  background: url(../images/labmu/labmu.jpg) no-repeat center center;
   @include backgroundm
   .labmutext {
     color: black;
     font-size: 3em;
     padding-bottom: 10px;
-    border-bottom: 3px solid black;
+    // border-bottom: 3px solid black;
   }
 }
 
 .xlp > a {
   padding: 150px 0;
-  width: 90%;
-  background: url(../imgs/xlp/xlp.jpg) no-repeat center center;
+  width: 100%;
+  background: url(../images/xlp/xlp.jpg) no-repeat center center;
   @include backgroundm
   .xlptext {
     color: black;
     font-size: 3em;
     padding-bottom: 10px;
-    border-bottom: 3px solid black;
+    // border-bottom: 3px solid black;
   }
 }
