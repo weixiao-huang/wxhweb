@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
@@ -11,12 +11,12 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/fullpage.js/jquery.fullPage.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/projects.css">
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -28,42 +28,27 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="container">
-      <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-          <div class="navbar-header">
-            <a href="#" class="navbar-brand">WEIXIAO HUANG</a>
-          </div>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="projects.html">PROJECTS</a></li>
-            <li><a href="activities.html">ACTIVITIES</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-          </ul>
+    <nav class="navbar navbar-inner">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand">WEI<span style="color:#548235">XIAO</span> HUANG</a>
         </div>
-      </nav>
-
-      <canvas class="navtree"></canvas>
-
-      <div id="fullpage">
-        <div class="section s1">
-          <div class="intro">IPublic Activities</div>
-            <hr id="introbt"/>
-            <div class="slogan">Everyone should be responsible for the world</div>
-          </div>
-        <div class="section s2">Section 2</div>
-        <div class="section s3">Section 3</div>
-        <div class="section s4">Section 4</div>
-        <div class="section s5">Section 5</div>
-        <div class="section s6">Section 6</div>
-        <div class="section s7">Section 7</div>
+        <ul class="nav navbar-nav navbar-right in">
+          <li><a href="index.html">home</a></li>
+          <li><a href="projects.html">projects</a></li>
+          <li class="active"><a href="activities.html">activities</a></li>
+          <li><a href="about.html">about</a></li>
+        </ul>
       </div>
+    </nav>
 
-      <div class="footer">
-        <p>♥Powered By Lab μ Web Group</p>
-      </div>
+    <div class="container">
+
     </div>
-
+    <br><br><br>
+    <div class="footer">
+      <p class="footertext">♥Powered By Lab μ Web Group</p>
+    </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -101,23 +86,6 @@
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
-    <script src="scripts/drawTree.js"></script>
     <!-- endbuild -->
-    <script>
-      $(document).ready(function() {
-        $('#fullpage').fullpage({
-          anchors:[
-            'Public', 'SAEPA', 'Teaching', 'SSLP',
-            'Performance', '2014 Student Festival', '2015 Student Festival'
-          ],
-          slidesNavigation:true,
-          controlArrowColor:'#000'
-        });
-      });
-      drawTree([
-        ['Public', 'SAEPA', 'Teaching', 'SSLP'],
-        ['Performance', '2014 Student Festival', '2015 Student Festival']
-      ]);
-    </script>
   </body>
 </html>
