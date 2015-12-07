@@ -1,3 +1,5 @@
+$figbackcolor: #f9f9f9;
+
 @font-face {
     font-family: helvetica;
     src: url(../fonts/helveticaneueltstd-th.otf)
@@ -24,12 +26,14 @@
   color: white;
   display: inline-block;
   position: relative;
+  background-color: $figbackcolor;
   z-index: 1;
   &:before {
     background-image: inherit;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: $figbackcolor;
     content: '';
     height: 100%;
     left: 0px;
@@ -55,13 +59,21 @@
   // position:relative;
   // z-index: -1;
   margin-top: -20px;
-  height: 100%;
-  width: 100%;
 }
 
 .text_box {
+  margin: 5% 0;
+  .mwtitle {
+    font-size: 4em;
+  }
+  .mwtitle2 {
+    font-size: 2.2em;
+  }
+  .textarea {
+    font-size: 1.5em;
+  }
   // padding: 50px 0;
-  padding-bottom: 300px;
+  // padding-bottom: 300px;
 }
 
 .concert {
@@ -94,9 +106,9 @@
   }
 }
 
-.saxtext, .xytext, .harptext, .text_box {
+.saxtext, .xytext, .harptext {
   color: black;
   font-size: 3em;
-  padding-bottom: 10px;
+  // padding-bottom: 10px;
   // border-bottom: 3px solid black;
 }
