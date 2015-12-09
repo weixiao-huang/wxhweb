@@ -1,0 +1,89 @@
+@mixin Opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+// @mixin background ($folder:mw, $img:file, $type:png) {
+//     background-image: url(../imgs/#{$folder}/#{$img}.#{$type}) no-repeat center center fixed;
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     background-size: cover;
+//     -o-background-size: cover;
+// }
+
+@mixin backgroundm  {
+  text-decoration: none;
+  background-size: 0 0;
+  color: white;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  &:before {
+    background-image: inherit;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    height: 100%;
+    left: 0px;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    -webkit-transition: opacity 300ms;
+    transition: opacity 300ms;
+  }
+  &:hover:before {
+    opacity: 0.2;
+  }
+}
+
+.img_block {
+  margin-top: 30px;
+}
+
+.mw > a {
+  padding: 200px 0;
+  width: 100%;
+  background: url(../images/mw/mw.jpg) no-repeat center center;
+  @include backgroundm
+  .mwtext1 {
+    color: black;
+    font-size: 5em;
+    padding-bottom: 10px;
+    // border-bottom: 3px solid black;
+  }
+  .mwtext2 {
+    color: black;
+    font-size: 4em;
+  }
+}
+
+.labmu > a {
+  padding: 150px 0;
+  width: 100%;
+  background: url(../images/labmu/labmu.jpg) no-repeat center center;
+  @include backgroundm
+  .labmutext {
+    color: black;
+    font-size: 3em;
+    padding-bottom: 10px;
+    // border-bottom: 3px solid black;
+  }
+}
+
+.xlp > a {
+  padding: 150px 0;
+  width: 100%;
+  background: url(../images/xlp/xlp.jpg) no-repeat center center;
+  @include backgroundm
+  .xlptext {
+    color: black;
+    font-size: 3em;
+    padding-bottom: 10px;
+    // border-bottom: 3px solid black;
+  }
+}
