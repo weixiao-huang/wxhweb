@@ -48,7 +48,7 @@
     <div class="video_box text-center">
       <div class="concert">
         <div class="video-container">
-          <video id="concert1" class="html5-video-player" width="100%" height="100%" poster="mw.jpg" loop autoplay muted>
+          <video id="concert1" class="html5-video-player" poster="mw.jpg" loop autoplay muted>
             <source src="./videos/Canon_bt.mp4" type="video/mp4">
           </video>
         </div>
@@ -58,7 +58,7 @@
         <!-- <span class="bounce"><a href="#next" class="arrow animated fadeIn delay_three">Scroll down</a></span> -->
       </div>
     </div>
-    
+
     <div class="container">
       <div class="text_box">
           <div class="mwtitle text-center">
@@ -149,10 +149,10 @@
       // $(document).ready(function(){
       //   $('a[href^="#"]').bind('click.smoothscroll',function (e) {
       //       e.preventDefault();
-         
+
       //       var target = this.hash,
       //       $target = $(target);
-         
+
       //       $('html, body').stop().animate({
       //           'scrollTop': $target.offset().top
       //       }, 300, 'swing', function () {
@@ -160,7 +160,15 @@
       //       });
       //   });
       // });
-
+      $(document).ready(function() {
+        var video = $('video');
+        video.css('height', $(window).height() - $('.navbar').height() + 'px');
+        video.css('width', $(window).width());
+        $(window).resize(function() {
+          video.css('height', $(window).height() - $('.navbar').height() + 'px');
+          video.css('width', $(window).width());
+        });
+      });
     </script>
   </body>
 </html>

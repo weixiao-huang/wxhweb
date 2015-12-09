@@ -46,9 +46,9 @@
     </nav>
 
     <div class="img_title text-center">
-      <img class="text-center" src="./images/mw/sax2.jpg" height="100%">
+      <img class="text-center" src="./images/mw/sax2.jpg">
     </div>
-    
+
     <div class="container">
       <div class="text_box">
         <h1 class="text-center">Saxophone</h1>
@@ -116,10 +116,10 @@
       // $(document).ready(function(){
       //   $('a[href^="#"]').bind('click.smoothscroll',function (e) {
       //       e.preventDefault();
-         
+
       //       var target = this.hash,
       //       $target = $(target);
-         
+
       //       $('html, body').stop().animate({
       //           'scrollTop': $target.offset().top
       //       }, 300, 'swing', function () {
@@ -127,7 +127,15 @@
       //       });
       //   });
       // });
-
+      $(document).ready(function() {
+        var img = $('img');
+        img.css('height', $(window).height() - $('.navbar').height() + 'px');
+        img.css('width', $(window).width());
+        $(window).resize(function() {
+          img.css('height', $(window).height() - $('.navbar').height() + 'px');
+          img.css('width', $(window).width());
+        });
+      });
     </script>
   </body>
 </html>
