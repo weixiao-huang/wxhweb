@@ -42,8 +42,8 @@ $figbackcolor: #f9f9f9;
     top: 0px;
     width: 100%;
     z-index: 1;
-    -webkit-transition: opacity 100ms ease-in 240ms;
-    transition: opacity 100ms ease-in 240ms;
+    -webkit-transition: opacity 200ms ease-in 100ms;
+    transition: opacity 200ms ease-in 100ms;
   }
   &:hover:before {
     opacity: 1;
