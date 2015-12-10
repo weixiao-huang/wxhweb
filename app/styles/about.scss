@@ -5,11 +5,23 @@
   background-size: cover;
   color: #fff;
   font-size: 4em;
+  font-family: simplex;
+  font-weight: bold;
+  text-shadow: 1px 0 #000;
 }
 
 #textarea {
   padding: 60px 15%;
   p {
     font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #textarea {
+    padding: 20px 0;
+    p {
+      font-size: 1.2em;
+    }
   }
 }

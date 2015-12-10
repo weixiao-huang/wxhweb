@@ -5,21 +5,6 @@ $figbackcolor: #f9f9f9;
     src: url(../fonts/helveticaneueltstd-th.otf)
 }
 
-@mixin Opacity($value){
-  $IEValue: $value*100;
-  opacity: $value;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
-  filter: alpha(opacity=$IEValue);
-}
-
-// @mixin background ($folder:mw, $img:file, $type:png) {
-//     background-image: url(../imgs/#{$folder}/#{$img}.#{$type}) no-repeat center center fixed;
-//     -webkit-background-size: cover;
-//     -moz-background-size: cover;
-//     background-size: cover;
-//     -o-background-size: cover;
-// }
-
 @mixin backgroundm  {
   text-decoration: none;
   background-size: 0 0;
@@ -42,8 +27,8 @@ $figbackcolor: #f9f9f9;
     top: 0px;
     width: 100%;
     z-index: 1;
-    -webkit-transition: opacity 200ms ease-in 100ms;
-    transition: opacity 200ms ease-in 100ms;
+    -webkit-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in;
   }
   &:hover:before {
     opacity: 1;
@@ -103,4 +88,26 @@ $figbackcolor: #f9f9f9;
   font-size: 3em;
   // padding-bottom: 10px;
   // border-bottom: 3px solid black;
+}
+
+@media screen and (max-width: 480px) {
+  .sax, .harp, .xylophone {
+    font-size: 0.6em;
+    a {
+      padding: 80px 0;
+      width: 100%;
+    }
+  }
+  .text_box {
+    .mwtitle {
+      font-size: 2.5em;
+    }
+    .mwtitle2 {
+      font-size: 1.4em;
+    }
+    .textarea {
+      font-size: 1.1em;
+    }
+  }
+
 }

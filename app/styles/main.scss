@@ -72,3 +72,9 @@ $sidebar-width: 400px;
 	    font-family: bgothm;
 	}
 }
+
+@media screen and (max-width: 354px) {
+	.navbar .navbar-header > a {
+		font-size: 1.6em;
+	}
+}
