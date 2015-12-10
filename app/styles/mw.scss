@@ -42,8 +42,8 @@ $figbackcolor: #f9f9f9;
     top: 0px;
     width: 100%;
     z-index: 1;
-    -webkit-transition: opacity 150ms ease-in 240ms;
-    transition: opacity 150ms ease-in 240ms;
+    -webkit-transition: opacity 100ms ease-in 240ms;
+    transition: opacity 100ms ease-in 240ms;
   }
   &:hover:before {
     opacity: 1;
@@ -74,14 +74,6 @@ $figbackcolor: #f9f9f9;
   }
   // padding: 50px 0;
   // padding-bottom: 300px;
-}
-
-.concert {
-    color: rgb(255, 255, 255);
-    position: relative;
-    min-height: 350px;
-    // background: url(../images/mw/sax1.jpg) no-repeat scroll 0px 100% / cover transparent;
-    // background-size: cover;
 }
 
 .sax > a {
