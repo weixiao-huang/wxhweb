@@ -22,6 +22,16 @@ $sidebar-width: 400px;
     src: url(../fonts/helveticaneueltstd-th.otf)
 }
 
+@font-face {
+    font-family: calibri;
+    src: url(../fonts/calibril.otf)
+}
+
+p {
+	font-family: calibri;
+	font-weight: lighter;
+}
+
 .navbar {
 	background: $navbackcolor;
 	padding: 15px 0;
