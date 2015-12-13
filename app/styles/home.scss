@@ -1,0 +1,97 @@
+@mixin backgroundm  {
+  text-decoration: none;
+  background-size: 0 0;
+  display: inline-block;
+  position: relative;
+  // z-index: 1;
+  &:before {
+    background-image: inherit;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    height: 100%;
+    left: 0px;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    // z-index: 1;
+    -webkit-transition: opacity 300ms;
+    transition: opacity 300ms;
+  }
+  &:hover:before {
+    opacity: 0.2;
+  }
+}
+
+.cover_img {
+  margin-top: -20px;
+  padding: 100px 0;
+  background: url(../images/design.jpg) no-repeat center center;
+  background-size: cover;
+  z-index: -100;
+  color: white;
+  // color: rgb(73,34,7);
+  font-family: helvetica;
+  text-shadow: 1px 1px #000;
+  .cover_title {
+    font-size: 4em;
+  }
+  .cover_content {
+    font-size: 2em;
+  }
+}
+
+.img_box {
+  margin-top: 30px;
+  font-size: 2em;
+  color: #000;
+  a {
+    padding: 100px 0;
+    width: 100%; 
+    span {
+      font-size: 1.2em;
+      color: #000;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #000;
+    }
+  }
+}
+
+.mw > a {
+  background: url(../images/mw/mw.jpg) no-repeat center center;
+  @include backgroundm;
+}
+
+.labmu > a {
+  background: url(../images/labmu/labmu.jpg) no-repeat center center;
+  @include backgroundm;
+}
+
+.xlp > a {
+  background: url(../images/xlp/xlp.jpg) no-repeat center center;
+  @include backgroundm;
+}
+
+.sp > a {
+  background: url(../images/airhocky/airhocky.png) no-repeat center center;
+  @include backgroundm;
+}
+
+
+#textarea {
+  padding: 60px 15%;
+  p {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #textarea {
+    padding: 20px 0;
+    p {
+      font-size: 1.2em;
+    }
+  }
+}

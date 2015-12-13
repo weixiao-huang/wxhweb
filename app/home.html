@@ -32,7 +32,7 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -54,8 +54,71 @@
       </div><!--/.container-fluid -->
     </nav>
 
-	<div>
-		
+	<div class="cover_img text-center">
+	  <span class="cover_title">Design and Technology</span><br>
+	  <span class="cover_content">Give People More "!" Moments</span>
+	</div>
+
+	<div class="container">
+	  <div id="textarea">
+	  	<h1 class="text-center">Who am I?</h1>
+	  	<br>
+	  	<p>
+	  	  My name is Weixiao Huang (黄维啸), a designer and researcher, a combination of Geek and Artist, a crazy guy consisting with strange thinking and uncanny behavior. Is it enough to know me? Aha, I don't think so!
+	  	</p>
+	  	<br>
+	  	<h1 class="text-center">Where am I?</h1>
+	  	<br>
+	  	<p>
+	  		I'm a 4-year undergraduate student studying in <a href="http://www.tsinghua.edu.cn/publish/newthuen/">Tsinghua University</a> with a major in Engineering Mechanics at Tsien's Excellence in Education Program (TEEP). And now I'm also a Visiting Student Researcher (VSR) at <a href="http://www.berkeley.edu/">UC Berkeley</a> under the supervision of Prof. David Steigmann.
+	  	</p>
+<!-- 	  	<div class="map_block row">
+	  	  <div class="img_box col-md-6">
+            <div class="embed-responsive embed-responsive-4by3">
+	          <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14964.087625174712!2d116.31864426127683!3d40.002711681687124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f0541fa61e3c8f%3A0xd95a50fee0e0e2c9!2sTsinghua+University!5e0!3m2!1sen!2sus!4v1449992474195" frameborder="0" style="border:0" allowfullscreen></iframe>
+	        </div>
+	  	  </div>
+	  	  <div class="img_box col-md-6">
+            <div class="embed-responsive embed-responsive-4by3">
+	          <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6299.024978640042!2d-122.26414852190416!3d37.87169593873323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7718c522d7c1%3A0xda8034ea3b6b3289!2sUniversity+of+California%2C+Berkeley!5e0!3m2!1sen!2sus!4v1449992752491" frameborder="0" style="border:0" allowfullscreen></iframe>
+	        </div>
+	  	  </div>
+	  	</div> -->
+	  	<h1 class="text-center">What I do?</h1>
+	  	<p class="text-center">oh yeah</p>
+	  	<p>
+	  	  During my life in Tsinghua University, I have done some interesting projects, as you can see below. Of course, because of my long time in playing the piano for about 15 years, I show a great interest in music. So I fully recommend you to see the Music Workshop project!
+	  	</p>
+        <div class="mw img_box text-center">
+  	      <a href="musicworkshop.html">
+  	  	    <span>Music Workshop</span>
+  	  	  </a>
+  	    </div>
+	  	<div class="projects_block row">
+	  	  <div class="labmu img_box col-md-6 text-center">
+	  	  	<a href="labmu.html">
+	  	  	  <span>Lab μ</span>
+	  	  	</a>
+	  	  </div>
+	  	  <div class="xlp img_box col-md-6 text-center">
+	  	  	<a href="">
+	  	  	  <span>XLP</span>
+	  	  	</a>
+	  	  </div>
+	  	</div>
+	  	<h1 class="text-center"><br>My dream?</h1>
+	  	<p><br>
+	  	  No one dislike beautiful things, neither do I. I like what astonishes me with its awesome design and great potential. I like computer science for its huge useful effects to do design and technical beautiful work. I like creativity, because with it we can create unprecedented things exciting human beings and improve our life.
+	  	</p>
+	  	<p>
+	  	  Anyway, designer <a href="http://www.nendo.jp/en/concept/">Nendo</a> said: Giving people a small "!" moment. And my dream is giving people more "!" moments!
+	  	</p>
+	  	<br>
+	  	<h1 class="text-center">How to find me?</h1>
+	  	<p><br>
+	  	  Opening your email, I'm willing to receive your precious email about my research and work. I will appreciate it if it contains creative thinkings about which you want to advise me. There is my email: <a href="mailto:hwx.simle@gmail.com"><span class="glyphicon glyphicon-envelope"></span>hwx.simle@gmail.com</a>
+	  	</p>
+	  </div>
 	</div>
 
     <br><br><br>
@@ -98,192 +161,6 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
 
-    <script type="text/javascript">
-        $(function() {
-    //current thumb's index being viewed
-    var current     = -1;
-    //cache some elements
-    var $btn_thumbs = $('#fp_thumbtoggle');
-    var $loader   = $('#fp_loading');
-    var $btn_next   = $('#fp_next');
-    var $btn_prev   = $('#fp_prev');
-    var $thumbScroller  = $('#thumbScroller');
-    
-    //total number of thumbs
-    var nmb_thumbs    = $thumbScroller.find('.content').length;
-    
-    //preload thumbs
-    var cnt_thumbs    = 0;
-    for(var i=0;i<nmb_thumbs;++i){
-      var $thumb = $thumbScroller.find('.content:nth-child('+parseInt(i+1)+')');
-      $('<img/>').load(function(){
-        ++cnt_thumbs;
-        if(cnt_thumbs == nmb_thumbs)
-    //display the thumbs on the bottom of the page
-    showThumbs(2000);
-      }).attr('src',$thumb.find('img').attr('src'));
-    }
-    
-    
-    //make the document scrollable
-    //when the the mouse is moved up/down
-    //the user will be able to see the full image
-    makeScrollable();
-    
-    //clicking on a thumb...
-    $thumbScroller.find('.content').bind('click',function(e){
-      var $content= $(this);
-      var $elem   = $content.find('img');
-      //keep track of the current clicked thumb
-      //it will be used for the navigation arrows
-      current   = $content.index()+1;
-      //get the positions of the clicked thumb
-      var pos_left  = $elem.offset().left;
-      var pos_top   = $elem.offset().top;
-      //clone the thumb and place
-      //the clone on the top of it
-      var $clone  = $elem.clone()
-      .addClass('clone')
-      .css({
-        'position':'fixed',
-        'left': pos_left + 'px',
-        'top': pos_top + 'px'
-      }).insertAfter($('BODY'));
-      
-      var windowW = $(window).width();
-      var windowH = $(window).height();
-      
-      //animate the clone to the center of the page
-      $clone.stop()
-      .animate({
-        'left': windowW/2 + 'px',
-        'top': windowH/2 + 'px',
-        'margin-left' :-$clone.width()/2 -5 + 'px',
-        'margin-top': -$clone.height()/2 -5 + 'px'
-      },500,
-      function(){
-        var $theClone   = $(this);
-        var ratio   = $clone.width()/120;
-        var final_w   = 400*ratio;
-        
-        $loader.show();
-        
-        //expand the clone when large image is loaded
-        $('<img class="fp_preview"/>').load(function(){
-          var $newimg     = $(this);
-          var $currImage  = $('#fp_gallery').children('img:first');
-          $newimg.insertBefore($currImage);
-          $loader.hide();
-          //expand clone
-          $theClone.animate({
-            'opacity'   : 0,
-            'top'     : windowH/2 + 'px',
-            'left'      : windowW/2 + 'px',
-            'margin-top'  : '-200px',
-            'margin-left' : -final_w/2 + 'px',
-            'width'     : final_w + 'px',
-            'height'    : '400px'
-          },1000,function(){$(this).remove();});
-          //now we have two large images on the page
-          //fadeOut the old one so that the new one gets shown
-          $currImage.fadeOut(2000,function(){
-            $(this).remove();
-          });
-          //show the navigation arrows
-          showNav();
-        }).attr('src',$elem.attr('alt'));
-      });
-      //hide the thumbs container
-      hideThumbs();
-      e.preventDefault();
-    });
-    
-    //clicking on the "show thumbs"
-    //displays the thumbs container and hides
-    //the navigation arrows
-    $btn_thumbs.bind('click',function(){
-      showThumbs(500);
-      hideNav();
-    });
-    
-    function hideThumbs(){
-      $('#outer_container').stop().animate({'bottom':'-160px'},500);
-      showThumbsBtn();
-    }
-
-    function showThumbs(speed){
-      $('#outer_container').stop().animate({'bottom':'0px'},speed);
-      hideThumbsBtn();
-    }
-    
-    function hideThumbsBtn(){
-      $btn_thumbs.stop().animate({'bottom':'-50px'},500);
-    }
-
-    function showThumbsBtn(){
-      $btn_thumbs.stop().animate({'bottom':'0px'},500);
-    }
-
-    function hideNav(){
-      $btn_next.stop().animate({'right':'-50px'},500);
-      $btn_prev.stop().animate({'left':'-50px'},500);
-    }
-
-    function showNav(){
-      $btn_next.stop().animate({'right':'0px'},500);
-      $btn_prev.stop().animate({'left':'0px'},500);
-    }
-
-    //events for navigating through the set of images
-    $btn_next.bind('click',showNext);
-    $btn_prev.bind('click',showPrev);
-    
-    //the aim is to load the new image,
-    //place it before the old one and fadeOut the old one
-    //we use the current variable to keep track which
-    //image comes next / before
-    function showNext(){
-      ++current;
-      var $e_next = $thumbScroller.find('.content:nth-child('+current+')');
-      if($e_next.length == 0){
-        current = 1;
-        $e_next = $thumbScroller.find('.content:nth-child('+current+')');
-      }
-      $loader.show();
-      $('<img class="fp_preview"/>').load(function(){
-        var $newimg     = $(this);
-        var $currImage    = $('#fp_gallery').children('img:first');
-        $newimg.insertBefore($currImage);
-        $loader.hide();
-        $currImage.fadeOut(2000,function(){$(this).remove();});
-      }).attr('src',$e_next.find('img').attr('alt'));
-    }
-    
-    function showPrev(){
-      --current;
-      var $e_next = $thumbScroller.find('.content:nth-child('+current+')');
-      if($e_next.length == 0){
-        current = nmb_thumbs;
-        $e_next = $thumbScroller.find('.content:nth-child('+current+')');
-      }
-      $loader.show();
-      $('<img class="fp_preview"/>').load(function(){
-        var $newimg     = $(this);
-        var $currImage    = $('#fp_gallery').children('img:first');
-        $newimg.insertBefore($currImage);
-        $loader.hide();
-        $currImage.fadeOut(2000,function(){$(this).remove();});
-      }).attr('src',$e_next.find('img').attr('alt'));
-    }
-    
-            function makeScrollable(){
-      $(document).bind('mousemove',function(e){
-        var top = (e.pageY - $(document).scrollTop()/2) ;
-        $(document).scrollTop(top);
-                });
-    }
-        });
-    </script>
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
