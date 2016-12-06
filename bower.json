@@ -1,11 +1,11 @@
 {
-  "name": "wxhweb",
+  "name": "yo-test2",
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
-    "Scrollify": "~0.1.11",
-    "fullpage.js": "~2.7.4"
+    "animate.css": "^3.5.2",
+    "animate-sass": "^0.6.6"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -17,7 +17,7 @@
     }
   },
   "devDependencies": {
-    "chai": "~3.4.2",
-    "mocha": "~2.3.4"
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
   }
 }
