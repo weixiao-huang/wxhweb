@@ -1,32 +1,24 @@
 <template lang="pug">
   #app
     navbar(:width="width")
-    #wrap(:style="{ marginLeft: width + 'px' }")
-      #about
-        .title Weixiao HUANG (黄维啸)
-        .subTitle.
-          Tsinghua University <br/>
-          University of California, Berkeley
-        .content
-          p.
-            I have been an undergraduate student in Tsinghua University and graduated from July, 2016.
-      #education
-      #experiences
+    wrap(:width="width")
 </template>
 
 <script>
 import Hello from './components/Hello'
 import Navbar from './components/Navbar'
+import Wrap from './components/Wrap'
 
 export default {
   name: 'app',
   components: {
     Hello,
-    Navbar
+    Navbar,
+    Wrap
   },
   data () {
     return {
-      width: 250
+      width: 300
     }
   }
 }
@@ -34,11 +26,15 @@ export default {
 
 <style lang="stylus">
 $default-fonts = "华文细黑", "Microsoft YaHei", "微软雅黑", Helvetica, Tahoma, Arial, STXihei, sans-serif;
+$default-font-color = #666;
 *, html, body
   margin 0
   padding 0
+  overflow hidden
+
 div
   font-family $default-fonts
+  color $default-font-color
 a, a:hover, a:active, a:before, a:after, a:visited
   text-decoration none
 li
@@ -47,16 +43,4 @@ li
 </style>
 
 <style lang="stylus" scoped>
-#wrap
-  padding 100px
-  #about
-    .title
-      color #123
-      font-size 35px
-    .subTitle
-      font-size 20px
-    .content
-      font-size 20px
-      p
-        padding 20px 0
 </style>

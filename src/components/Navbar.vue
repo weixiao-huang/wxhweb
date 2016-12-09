@@ -1,10 +1,13 @@
 <template lang="pug">
 nav(:style="{width: width + 'px'}")
   .container
-    template(v-for="(item, index) in items")
-      .navItem
-        .title
-          a(:href="item.src") {{ item.title }}
+    .img
+      img(src="../images/me.jpg")
+    .nav
+      template(v-for="(item, index) in items")
+        .navItem
+          .title
+            a(:href="item.src") {{ item.title }}
 </template>
 
 <script>
@@ -37,13 +40,19 @@ export default {
 nav
   position absolute
   height 100vh
-  background-color #123
+  background-color #23bbf3
   font-size 20px
   text-align center
   overflow-y hidden
   .container
     margin-top 100px
-
+    .img
+      padding 0 20%
+      img
+        width 100%
+        border-radius 100%
+    .nav
+      padding 20% 0
 a
   color white
   display block
