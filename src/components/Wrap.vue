@@ -61,8 +61,29 @@
         UC Berkeley.</a>
 
   .section#experiences
-    .title Experiences
-    .subTitle
+    .title Research Experiences
+    .subTitle The numerical analysis of problems in the mechanics of fiber-reinforced shells
+    .subTitle Music Workshop: automatically playing saxophone, study of pneumatic system
+    .subTitle TUNet-pc: a desktop client to automatically log in and connect the university network
+    .subTitle Extremely Learning Program (XLP), wind-hydro-combine power generation system
+
+  .section#projects
+    .title Projects
+    .subTitle Ray Tracing - Photon Mapping
+    .content.
+      Ray Tracing is a classical method for generating a physical based rendering scene.
+    .subTitle Mesh Simplification
+    .subTitle Automatically Particle Picking
+    .subTitle Spherical Gaussian Basic Function for PRT
+    .subTitle C++ Finite Element Framework
+    .subTitle OpenGL Air Hockey Game
+    .subTitle TUNet Desktop
+    .subTitle 8-Puzzle and (n^2-1)-Puzzle
+
+  .section#honors
+    .title Honors
+    .subContent American Mathematics Competition Honorable Mentions, 2016
+    .subContent 1st Price & Best Choice Award in Tsinghua 4th Innovation Contest with TUNet, Apr. 2015
 </template>
 
 <script>

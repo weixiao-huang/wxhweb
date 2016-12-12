@@ -28,6 +28,14 @@ export default {
         {
           title: 'Experiences',
           src: '#experiences'
+        },
+        {
+          title: 'Projects',
+          src: '#projects'
+        },
+        {
+          title: 'Honors',
+          src: '#honors'
         }
       ]
     }
