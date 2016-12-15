@@ -1,0 +1,39 @@
+.cover_img {
+  margin-top: -20px;
+  padding: 150px 0;
+  background: url(../images/xlp/xlp.jpg) no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  font-size: 4em;
+  text-shadow: 1px 1px #000;
+  #logo-holder {
+    width: 250px;
+    border: 2px white solid;
+    border-radius: 10px;
+    padding: 10px;
+    img {
+      width: 100%;
+      z-index: 1;
+    }
+  }
+}
+
+#textarea {
+  padding: 60px 15%;
+  p {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+	.cover_img {
+		padding: 100px 0;
+		font-size: 2em;
+	}
+  #textarea {
+    padding: 20px 0;
+    p {
+      font-size: 1.2em;
+    }
+  }
+}
