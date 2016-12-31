@@ -63,7 +63,7 @@
   .section#experiences
     .title Research Experiences
     .subTitle The numerical analysis of problems in the mechanics of fiber-reinforced shells
-    
+
     .subTitle Music Workshop
     .subContent Design Future Music
     .content
@@ -94,7 +94,11 @@
     .content.
       Ray Tracing is a classical method for generating a physical based rendering scene.
     .subTitle Mesh Simplification
+    .content.
+      This project aimed to develop a algorithm to simplify a mesh object in obj files.
     .subTitle Automatically Particle Picking
+    .content.
+      In computatinal biology,
     .subTitle Spherical Gaussian Basic Function for PRT
     .subTitle C++ Finite Element Framework
     .subTitle OpenGL Air Hockey Game
