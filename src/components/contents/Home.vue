@@ -7,21 +7,9 @@ container#home
     .subTitle University of California, Berkeley
     .subContent Visiting student researcher | October, 2015 - February, 2016
     .content
-      p.
-        I received my Bachelor degree majoring Engineering Mechanics from School of Aerospace,
-        Tsinghua University in July, 2016. I had been to University of California, Berkeley as
-        a visiting scholar under the supervisor of
-        <a href="http://www.me.berkeley.edu/people/faculty/david-steigmann" target="_blank">Prof. David
-        Steigmann</a> of Mechanical Engineering.
-      p.
-        I'm experienced at software developing, and led <a href="https://lab.mu/" target="_blank">Lab μ
-        Student Geek Association</a> which create daily software products for convenient campus life for
-        Tsinghua students.
-      p.
-        I show a great interest and passion in computer graphics and have oriented my research focus on it,
-        especially in real-time rendering. I've selected several related courses about it, such as
-        Computer Graphics, Computer Graphics Real Time and Animation. I has profound mathematical foundation,
-        nearly all grades of my mathematic course is over 90.
+      p I received my Bachelor degree majoring Engineering Mechanics from School of Aerospace, Tsinghua University in July, 2016. I had been to University of California, Berkeley as a visiting scholar under the supervisor of <a href="http://www.me.berkeley.edu/people/faculty/david-steigmann" target="_blank">Prof. David Steigmann</a> of Mechanical Engineering.
+      p I'm experienced at software developing, and led <a href="https://lab.mu/" target="_blank">Lab μ Student Geek Association</a> which create daily software products for convenient campus life for Tsinghua students.
+      p I show a great interest and passion in computer graphics and have oriented my research focus on it, especially in real-time rendering. I've selected several related courses about it, such as Computer Graphics, Computer Graphics Real Time and Animation. I has profound mathematical foundation, nearly all grades of my mathematic course is over 90.
 
   .section#education
     .title Education
@@ -32,11 +20,7 @@ container#home
       p Undergraduate Student
     .content
       p.
-        I have studied in Tsinghua University since August, 2012, majoring in Engineering Mechanics in Tsien's
-        Excellence in Education Program (TEEP), which is one of the six<a href="http://www.tsinghua.edu.cn/publish/newthuen/newthuen_cnt/admissions/admissions-1-4.html" target="_blank">
-        Tsinghua Xuetang Talents Programs</a>. During my study in TEEP, I got a profound knowledge in
-        mathematic and physics, which makes me much easier than others to learn new things and do difficult
-        research.
+        I have studied in Tsinghua University since August, 2012, majoring in Engineering Mechanics in Tsien's Excellence in Education Program (TEEP), which is one of the six<a href="http://www.tsinghua.edu.cn/publish/newthuen/newthuen_cnt/admissions/admissions-1-4.html" target="_blank"> Tsinghua Xuetang Talents Programs</a>. During my study in TEEP, I got a profound knowledge in mathematics and physics, which makes me much easier than others to learn new things and do difficult research.
     .subContent.bold Selected course work
     #course
       table(border='0', cellspacing="0", cellpadding="0")
@@ -47,7 +31,6 @@ container#home
           tr(v-for="(course, index) in courses", :class="{'backGray': index % 2 === 0}")
             td(v-for="item in course") {{ item }}
 
-
     .subTitle University of California, Berkeley
     .subContent
       p Oct. 2015 - Feb. 2016
@@ -55,9 +38,7 @@ container#home
       p Visiting Student Researcher
     .content
       p.
-        From October, 2015 - February, 2016, I worked at <a href="http://www.me.berkeley.edu/people/faculty/david-steigmann" target="_blank">
-        Prof. David Steigmann</a>'s Lab in Mechanical Engineering of <a href="http://www.berkeley.edu/" target="_blank">
-        UC Berkeley.</a>
+        From October, 2015 - February, 2016, I worked at <a href="http://www.me.berkeley.edu/people/faculty/david-steigmann" target="_blank"> Prof. David Steigmann</a>'s Lab in Mechanical Engineering of <a href="http://www.berkeley.edu/" target="_blank">UC Berkeley.</a>
 
   .section#experiences
     .title Research Experiences
@@ -76,7 +57,6 @@ container#home
       router-link(to="/tunet") TUNet-pc
     .subContent A desktop client to automatically log in and connect the university network
 
-
     .subTitle Extremely Learning Program (XLP), wind-hydro-combine power generation system
 
   .section#projects
@@ -89,7 +69,7 @@ container#home
       This project aimed to develop a algorithm to simplify a mesh object in obj files.
     .subTitle Automatically Particle Picking
     .content.
-      In computatinal biology,
+      In computational biology,
     .subTitle Spherical Gaussian Basic Function for PRT
     .subTitle C++ Finite Element Framework
     .subTitle OpenGL Air Hockey Game

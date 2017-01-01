@@ -1,6 +1,6 @@
 <template lang="pug">
-#wrap(:style="{ width :'calc(100vw - ' + (width + 'px)') }")
-  transition(namd="fade", mode="out-in")
+#wrap(:style="{ marginLeft: width + 'px' }")
+  transition(name="fade" mode="out-in")
     router-view.view
 </template>
 
@@ -14,4 +14,12 @@ export default {
 <style lang="stylus">
 .bold
   font-weight bold
+
+.fade-enter-active, .fade-leave-active {
+  transition: all 0.2s ease;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0;
+  transform translate(-30px, 0)
+}
 </style>

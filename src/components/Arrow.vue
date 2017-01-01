@@ -1,6 +1,6 @@
 <template lang="pug">
-  .arrow(:style="{width: width + 'px'}")
-    router-link(:to="to").vh &#8249;
+  #arrow(:style="{width: width + 'px'}")
+    router-link(:to="to") &#8249;
 </template>
 
 <script>
@@ -16,8 +16,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.arrow
+#arrow
   font-size 100px
+  position absolute
   a
     opacity 0.5
     -webkit-transition: all 0.5s
@@ -30,9 +31,6 @@ export default {
     &:hover
       color #8a8
 
-  position absolute
-
-  .vh
     height 100vh
     display flex
     justify-content center

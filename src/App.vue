@@ -1,7 +1,7 @@
 <template lang="pug">
   #app
-    navbar.scroll(:width="width")
-    wrap.scroll(:width="width")
+    navbar(:width="width")
+    wrap(:width="width")
 </template>
 
 <script>
@@ -23,14 +23,6 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus" scoped>
-  .scroll
-    height 100vh
-    display inline-block
-    overflow scroll
-</style>
-
 
 <style lang="stylus">
 $default-fonts = "华文细黑", "Microsoft YaHei", "微软雅黑", Helvetica, Tahoma, Arial, STXihei, sans-serif;

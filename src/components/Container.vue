@@ -1,9 +1,8 @@
 <template lang="pug">
 #container
-  arrow(:width="gap", to="/", :class="{hidden: !arrow}")
-  .container.scroll(:style="{margin: '0 ' + (gap + 'px')}")
+  arrow.arrow(:width="gap", to="/", :class="{hidden: !arrow}")
+  .container(:style="{paddingLeft: gap + 'px', paddingRight: gap + 'px'}")
     slot
-
 </template>
 
 <script>
@@ -24,6 +23,10 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+  .container
+    height calc(100vh - 200px)
+    overflow scroll
+    padding 100px 0
   .hidden
     visibility: hidden
   a
