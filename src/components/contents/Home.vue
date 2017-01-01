@@ -1,5 +1,5 @@
 <template lang="pug">
-#home
+container#home
   .section#about
     .title Weixiao HUANG (黄维啸)
     .subTitle Tsinghua University
@@ -72,7 +72,9 @@
       p From 2013 to 2015, we have got 3 creative instruments for our band: xylophone, saxophone and harp. And we have already tried a concert consisting of saxophone, harp played by the machines and piano, violin played by humans. Also, in our web, you can also get many surprises about other interesting recitals. So if you want to know what future music will be, come to see our project.
       p Music Workshop, imagine a creative future.
 
-    .subTitle TUNet-pc: a desktop client to automatically log in and connect the university network
+    .subTitle
+      router-link(to="/tunet") TUNet-pc
+    .subContent A desktop client to automatically log in and connect the university network
 
 
     .subTitle Extremely Learning Program (XLP), wind-hydro-combine power generation system
@@ -101,8 +103,13 @@
 </template>
 
 <script>
+import Container from '../Container'
+
 export default {
   name: 'home',
+  components: {
+    Container
+  },
   data () {
     return {
       tbTitle: ['Course name', 'Score'],
@@ -139,7 +146,6 @@ table
   th
     border-bottom 5px #ddd solid
 #home
-  padding 0 100px
   .section
     padding 10px 0
   a

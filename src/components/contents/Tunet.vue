@@ -1,6 +1,6 @@
 <template lang="pug">
-  container#mw(arrow="true")
-    .subTitle Music Workshop
+  container#tunet(arrow="true")
+    .subTitle TUNet
     .subContent Design Future Music
     .content
       p Music Workshop is a fantastic project put forward by Prof. Gangtie Zheng in 2013 and started in the summer of 2013. It was first developed by several 3-year undergraduate students majoring in Engineering Machanics in TEEP (Tsien’s Excellence in Education Program) at Tsinghua University.
@@ -28,7 +28,7 @@
 import Container from '../Container'
 
 export default {
-  name: 'home',
+  name: 'tunet',
   components: {
     Container
   }
@@ -36,4 +36,21 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+#mw
+  a
+    color #172
+  .title
+    font-size 35px
+    font-weight bold
+  .subTitle
+    font-size 25px
+    padding-top 10px
+  .content
+    font-size 20px
+  #about .title
+    color #123
+  .ssTitle
+    font-size 20px
+    font-weight bold
+    padding 10px 0 5px 0
 </style>
