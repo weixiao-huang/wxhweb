@@ -46,12 +46,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
 nav
-  position absolute
-  height 100vh
   background-color #23bbf3
   font-size 20px
   text-align center
-  overflow-y hidden
   .container
     margin-top 100px
     .img
