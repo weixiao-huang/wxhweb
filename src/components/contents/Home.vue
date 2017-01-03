@@ -66,7 +66,7 @@ container#home
         p TUNet is a great app for students in Tsinghua University to automatically connect the campus internet conveniently as well as search useful messages of course and study by adding various package developed by Lab μ, which is a science and technology club in Tsinghua University, aiming to develop effective App to improve the convenience of students' life in Tsinghua University.
         p This project has gained the 1st Price & Best Choice Award in Tsinghua 4th Innovation Contest, Apr. 2015
         .imgBox
-          .img(style="paddingRight: 10px")
+          .img.img-gap
             img(src="../../images/labmu/TUNet-pc.jpg")
           .img
             img(src="../../images/labmu/About.jpg")
@@ -84,22 +84,55 @@ container#home
       .subTitle Ray Tracing - Photon Mapping
       .content.
         Ray Tracing is a classical method for generating a physical based rendering scene.
+      .imgBox
+        .img.img-gap
+          img(src="../../images/projects/raytracer/index2.png")
+        .img
+          img(src="../../images/projects/raytracer/index.png")
+      .vm
+        router-link(to="/raytracer") View More >>
     .card
       .subTitle OpenGL Air Hockey Game
-    .card
-      .subTitle Mesh Simplification
       .content.
-        This project aimed to develop a algorithm to simplify a mesh object in obj files.
+        I developed an interesting game called <i>Air Hockey Game</i> by using OpenGL, in which you can control you own mallet to collide the puck for strike it into opposite's goal to win the game.
+      .imgBox
+        .img.img-gap
+          img(src="../../images/projects/airhockey/index1.png")
+        .img
+          img(src="../../images/projects/airhockey/index2.png")
+      .vm
+        router-link(to="/airhockey") View More >>
+    //- .card
+    //-   .subTitle Mesh Simplification
+    //-   .content.
+    //-     This project aimed to develop a algorithm to simplify a mesh object in obj files.
     .card
       .subTitle Automatically Particle Picking
+      .subContent Zhipeng Jia, Yuping Luo, Weixiao Huang
       .content.
-        In computational biology,
-    .card
-      .subTitle Spherical Gaussian Basic Function for PRT
-    .card
-      .subTitle C++ Finite Element Framework
+        We developed a deep learning algorithm to Automatically pick the particles in the Cryo-EM by using a lot of reference datasets.
+      .imgBox
+        .img.img-gap
+          img(src="../../images/projects/particles/cal.png")
+        .img.img-gap
+          img(src="../../images/projects/particles/cube.png")
+        .img
+          img(src="../../images/projects/particles/cube1.png")
+      .vm
+        router-link(to="/autopick") View More >>
+    //- .card
+    //-   .subTitle Spherical Gaussian Basic Function for PRT
+    //- .card
+    //-   .subTitle C++ Finite Element Framework
     .card
       .subTitle 8-Puzzle and (n^2-1)-Puzzle
+      .content
+        p I developed a mathematical method for solving the 8-Puzzle, which is a smaller case of the <a href="https://en.wikipedia.org/wiki/15_puzzle">15-puzzle</a>. Instead of using a search strategy, my methods is just origined from a mathematical case, which can be generalized into a global form for solving the (n^2-1)-Puzzle. And I write an interface in Fortran to solve the global case.
+        p Also I write a UI using Java. In this small game, you can play it as well as let the program help you automatically solve it.
+      img(width="100%", src="../../images/projects/8-puzzle/index.png")
+      .vm
+        router-link(to="/eightpuzzle") View More >>
+
 
   .section#honors
     .title.before Honors
@@ -135,6 +168,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.img-gap
+  padding-right 20px
 .backGray
   background-color rgba(244, 244, 244, 0.8)
 table
@@ -158,11 +193,12 @@ table
     border-top 1px dashed #999
     margin-top 10px
 
-  .img
-    display inline-block
-    width 45%
-    img
-      width 100%
+  .imgBox
+    display flex
+    justify-content space-around
+    .img
+      img
+        width 100%
   a
     color #172
   .title
@@ -189,6 +225,7 @@ table
       width calc(50vw - 260px)
       height calc(9/16 * (50vw - 260px))
   .vm
+    padding 10px 0 20px 0
     text-align: center
     font-size 20px
 </style>

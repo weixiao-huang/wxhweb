@@ -2,7 +2,7 @@
 nav(:style="{width: width + 'px'}")
   .container
     .img
-      img(src="../images/me.jpg")
+      //- img(src="../images/me.jpg")
     .nav
       template(v-for="(item, index) in items")
         .navItem
