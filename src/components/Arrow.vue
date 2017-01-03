@@ -17,7 +17,7 @@ export default {
 
 <style lang="stylus" scoped>
 #arrow
-  font-size 100px
+  font-size 80px
   position absolute
   a
     opacity 0.5

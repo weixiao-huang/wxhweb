@@ -57,21 +57,21 @@ container#home
         .box
           iframe(src="https://www.youtube.com/embed/AiGWyiMEfgE", frameborder="0", allowfullscreen)
       .vm
-        router-link(to="/mw") View More >>
+        router-link.view-more(to="/mw") View More >>
 
     .card
       .subTitle TUNet-pc
-      .subContent A desktop client to automatically log in and connect the university network
+      .subContent A desktop client to automatically connect the campus network
       .content
         p TUNet is a great app for students in Tsinghua University to automatically connect the campus internet conveniently as well as search useful messages of course and study by adding various package developed by Lab μ, which is a science and technology club in Tsinghua University, aiming to develop effective App to improve the convenience of students' life in Tsinghua University.
         p This project has gained the 1st Price & Best Choice Award in Tsinghua 4th Innovation Contest, Apr. 2015
-        .imgBox
-          .img.img-gap
-            img(src="../../images/labmu/TUNet-pc.jpg")
-          .img
-            img(src="../../images/labmu/About.jpg")
-        .vm
-          router-link(to="/tunet") View More >>
+      .imgBox
+        .img.img-gap
+          img(src="../../images/labmu/TUNet-pc.jpg")
+        .img
+          img(src="../../images/labmu/About.jpg")
+      .vm
+        router-link.view-more(to="/tunet") View More >>
 
     //- .card
     //-   .subTitle Extremely Learning Program (XLP), wind-hydro-combine power generation system
@@ -90,7 +90,7 @@ container#home
         .img
           img(src="../../images/projects/raytracer/index.png")
       .vm
-        router-link(to="/raytracer") View More >>
+        router-link.view-more(to="/raytracer") View More >>
     .card
       .subTitle OpenGL Air Hockey Game
       .content.
@@ -101,7 +101,7 @@ container#home
         .img
           img(src="../../images/projects/airhockey/index2.png")
       .vm
-        router-link(to="/airhockey") View More >>
+        router-link.view-more(to="/airhockey") View More >>
     //- .card
     //-   .subTitle Mesh Simplification
     //-   .content.
@@ -119,7 +119,7 @@ container#home
         .img
           img(src="../../images/projects/particles/cube1.png")
       .vm
-        router-link(to="/autopick") View More >>
+        router-link.view-more(to="/autopick") View More >>
     //- .card
     //-   .subTitle Spherical Gaussian Basic Function for PRT
     //- .card
@@ -131,13 +131,13 @@ container#home
         p Also I write a UI using Java. In this small game, you can play it as well as let the program help you automatically solve it.
       img(width="100%", src="../../images/projects/8-puzzle/index.png")
       .vm
-        router-link(to="/eightpuzzle") View More >>
+        router-link.view-more(to="/eightpuzzle") View More >>
 
 
   .section#honors
     .title.before Honors
-    .content American Mathematics Competition Honorable Mentions, 2016
-    .content 1st Price & Best Choice Award in Tsinghua 4th Innovation Contest with TUNet, Apr. 2015
+    .content(style="padding-top: 40px") American Mathematics Competition Honorable Mentions, 2016
+    .content(style="padding-top: 20px") 1st Price & Best Choice Award in Tsinghua 4th Innovation Contest with TUNet, Apr. 2015
 </template>
 
 <script>
@@ -187,7 +187,10 @@ table
     border-bottom 5px #ddd solid
 #home
   .section
-    padding 10px 0
+    background-color white
+    margin 30px 0
+    padding 50px
+    box-shadow 2px 2px 10px #888
 
   .card
     border-top 1px dashed #999
@@ -200,7 +203,14 @@ table
       img
         width 100%
   a
-    color #172
+    transition all 0.2s
+    color #666
+    border-bottom 1px dotted #bbb
+    &:hover
+      color #172
+      border-bottom 1px dotted #fff
+  .view-more
+    color #627758
   .title
     border-left 20px solid #7559aa
     padding-left 20px
@@ -211,10 +221,19 @@ table
     font-weight bold
     color #123
   .subTitle
-    font-size 25px
+    &::before
+      content "¶ "
+      color #627755
+    font-weight bold
+    font-size 22px
     padding-top 10px
+  .subContent
+    font-size 16px
+    padding-bottom 10px
+    color: #aaa
   .content
-    font-size 20px
+    padding 10px 0
+    font-size 18px
   .ssTitle
     font-size 20px
     font-weight bold

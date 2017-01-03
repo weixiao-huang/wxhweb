@@ -16,7 +16,7 @@ export default {
   },
   data () {
     return {
-      gap: 100
+      gap: 50
     }
   }
 }
@@ -24,6 +24,7 @@ export default {
 
 <style lang="stylus" scoped>
   .container
+    background-color #f3f3f3
     height calc(100vh - 200px)
     overflow scroll
     padding 100px 0
