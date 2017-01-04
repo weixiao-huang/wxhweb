@@ -90,8 +90,8 @@
           img(src="../../images/projects/raytracer/index2.png")
         .img
           img(src="../../images/projects/raytracer/index.png")
-      .vm
-        router-link.view-more(to="/raytracer") View More >>
+      //- .vm
+      //-   router-link.view-more(to="/raytracer") View More >>
     .card
       .subTitle OpenGL Air Hockey Game
       .content.
@@ -101,8 +101,8 @@
           img(src="../../images/projects/airhockey/index1.png")
         .img
           img(src="../../images/projects/airhockey/index2.png")
-      .vm
-        router-link.view-more(to="/airhockey") View More >>
+      //- .vm
+      //-   router-link.view-more(to="/airhockey") View More >>
     //- .card
     //-   .subTitle Mesh Simplification
     //-   .content.
@@ -131,8 +131,8 @@
         p I developed a mathematical method for solving the 8-Puzzle, which is a smaller case of the <a href="https://en.wikipedia.org/wiki/15_puzzle">15-puzzle</a>. Instead of using a search strategy, my methods is just origined from a mathematical case, which can be generalized into a global form for solving the (n^2-1)-Puzzle. And I write an interface in Fortran to solve the global case.
         p Also I write a UI using Java. In this small game, you can play it as well as let the program help you automatically solve it.
       img(width="100%", src="../../images/projects/8-puzzle/index.png")
-      .vm
-        router-link.view-more(to="/eightpuzzle") View More >>
+      //- .vm
+      //-   router-link.view-more(to="/eightpuzzle") View More >>
 
 
   .section#honors
@@ -199,7 +199,7 @@ table
 
   .card
     border-top 1px dashed #999
-    margin-top 10px
+    margin-top 20px
 
   .imgBox
     display flex
@@ -251,7 +251,7 @@ table
       width calc(50vw - 260px)
       height calc(9/16 * (50vw - 260px))
   .vm
-    padding 10px 0 20px 0
+    padding-top 10px
     text-align: center
     font-size 20px
 </style>

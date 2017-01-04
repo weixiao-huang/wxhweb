@@ -13,9 +13,11 @@ nav(:style="{width: width + 'px'}")
             a(:href="item.src") {{ item.title }}
     footer
       .github
-        a(href="https://github.com/ztxcydzz") &#xf09b;
+        a(href="https://github.com/ztxcydzz")
+          img(src="../assets/github.svg")
       .email
-        a(href="mailto:hwx.simle@gmail.com") send email
+        a(href="mailto:hwx.simle@gmail.com")
+          img(src="../assets/email.svg")
 </template>
 
 <script>
@@ -78,7 +80,7 @@ nav
   font-size 16px
   text-align center
   .container
-    margin-top 50px
+    margin-top 30px
     .img
       padding 0 20%
       img
@@ -91,7 +93,16 @@ nav
   footer
     text-align center
     div
+      width 30px
       display inline-block
+      padding 0 10px
+      a
+        transition opacity 0.3s
+        opacity 0.5
+        &:hover
+          opacity 1
+        img
+          width 100%
 a
   color white
   display block
