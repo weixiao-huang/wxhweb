@@ -1,6 +1,7 @@
 <template lang="pug">
   container#tunet(arrow="true")
-    .subTitle TUNet
+    .title TUNet
+    .subContent Make you campus life more conveniet
     .content
       p TUNet is a great app for students in Tsinghua University to automatically connect the campus internet convenietly as well as search useful messages of course and study by adding various package developed by us.
       p The university has already had an App to automatically connect the campus internet. However, the UI of it is not beautiful and the function is limited. In view of this problem, we want to develop a different and more efficient App to make students more convenient to connect the campus internet and search course messages in our App.
@@ -17,11 +18,10 @@
 
     .ssTitle#creativeComp Creative Competition
     .content
-      p In April 4, 2015, we have took part in the Tsinghua University Creative Competetion by using our TUNet learn helper package. Our lab added the learn helper plugin embedded in the TUNet Android, an App developed by another group in Lab μ, making it convenient for students to see information of their selected course and homework. For preparing the competetion, I design a fantastic video for the competetion presentation. Finally, we won the <span class="bold">Best Choice Award</span> and <span class="bold">the 1st Prize of the Creative Competetion of Tsinghua University</span>
+      p In April 4, 2015, we have took part in the Tsinghua University Creative Competetion by using our TUNet learn helper package. Our lab added the learn helper plugin embedded in the TUNet Android, an App developed by another group in Lab μ, making it convenient for students to see information of their selected course and homework. For preparing the competetion, I design a fantastic video for the competetion presentation.
+      p Finally, we won the <span class="bold">Best Choice Award</span> and <span class="bold">the 1st Prize of the Creative Competetion of Tsinghua University</span>
     img(style="padding: 20px 0", width="100%", src="../../images/labmu/CreativeComp.jpg")
     iframe(src="https://www.youtube.com/embed/NOwgt2Hflsk", frameborder="0", allowfullscreen)
-
-
 </template>
 
 <script>
@@ -43,6 +43,6 @@ export default {
     img
       width 100%
   iframe
-    width calc(100vw - 500px)
-    height calc(9/16 * (100vw - 500px))
+    width calc(100vw - 500px + 40px)
+    height calc(9/16 * (100vw - 500px + 40px))
 </style>

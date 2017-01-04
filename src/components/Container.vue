@@ -16,7 +16,7 @@ export default {
   },
   data () {
     return {
-      gap: 50
+      gap: 80
     }
   }
 }
@@ -24,10 +24,9 @@ export default {
 
 <style lang="stylus" scoped>
   .container
-    background-color #f3f3f3
-    height calc(100vh - 200px)
+    padding 50px
+    height calc(100vh - 100px)
     overflow scroll
-    padding 100px 0
   .hidden
     visibility: hidden
   a
@@ -38,12 +37,17 @@ export default {
   .subTitle
     font-size 25px
     padding-top 10px
+  .subContent
+    font-size 16px
+    padding-bottom 10px
+    color: #aaa
   .content
-    font-size 20px
-  #about .title
-    color #123
+    font-size 18px
+    p
+      padding-bottom 20px
   .ssTitle
+    // border-top 1px dashed #111
     font-size 20px
     font-weight bold
-    padding 10px 0 5px 0
+    padding 20px 0 10px 0
 </style>

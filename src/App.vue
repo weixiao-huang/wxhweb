@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang="stylus">
-$default-fonts = "华文细黑", "Microsoft YaHei", "微软雅黑", Helvetica, Tahoma, Arial, STXihei, sans-serif;
+$default-fonts = Georgia, Arial, Times New Roman, Verdana, sans-serif;
 $default-font-color = #666;
 *, html, body
   margin 0
@@ -40,4 +40,3 @@ a, a:hover, a:active, a:before, a:after, a:visited
 li
   list-style-type none
 </style>
-

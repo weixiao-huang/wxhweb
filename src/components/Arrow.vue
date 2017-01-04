@@ -38,5 +38,4 @@ export default {
 
 .navRight
   right 0
-
 </style>

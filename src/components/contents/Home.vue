@@ -1,5 +1,5 @@
 <template lang="pug">
-container#home
+.container#home
   .section#about
     .bigTitle Weixiao HUANG (黄维啸)
     .subTitle Tsinghua University
@@ -21,7 +21,7 @@ container#home
     .content
       p.
         I have studied in Tsinghua University since August, 2012, majoring in Engineering Mechanics in Tsien's Excellence in Education Program (TEEP), which is one of the six<a href="http://www.tsinghua.edu.cn/publish/newthuen/newthuen_cnt/admissions/admissions-1-4.html" target="_blank"> Tsinghua Xuetang Talents Programs</a>. During my study in TEEP, I got a profound knowledge in mathematics and physics, which makes me much easier than others to learn new things and do difficult research.
-    .subContent.bold Selected course work
+    .subContent.bold(style="color: #666;") Selected course work
     #course
       table(border='0', cellspacing="0", cellpadding="0")
         thead
@@ -50,7 +50,8 @@ container#home
       .subTitle Music Workshop
       .subContent Design Future Music
       .content
-        Music Workshop aimed to make the instruments play music automatically, so as to explore and define “the next generation of orchestra”. Now we have got 3 creative instruments for our band: xylophone, saxophone and harp. And we have already tried a concert consisting of saxophone, harp played by the machines and piano, violin played by humans.
+        p Music Workshop aimed to make the instruments play music automatically, so as to explore and define “the next generation of orchestra”.
+        p Now we have got 3 creative instruments for our band: xylophone, saxophone and harp. And we have already tried a concert consisting of saxophone, harp played by the machines and piano, violin played by humans.
       .videos
         .box(style="paddingRight: 10px")
           iframe(src="https://www.youtube.com/embed/fBsYP7cxx_o", frameborder="0", allowfullscreen)
@@ -64,7 +65,7 @@ container#home
       .subContent A desktop client to automatically connect the campus network
       .content
         p TUNet is a great app for students in Tsinghua University to automatically connect the campus internet conveniently as well as search useful messages of course and study by adding various package developed by Lab μ, which is a science and technology club in Tsinghua University, aiming to develop effective App to improve the convenience of students' life in Tsinghua University.
-        p This project has gained the 1st Price & Best Choice Award in Tsinghua 4th Innovation Contest, Apr. 2015
+        p This project has winned the 1st Price & Best Choice Award in Tsinghua 4th Innovation Contest, Apr. 2015
       .imgBox
         .img.img-gap
           img(src="../../images/labmu/TUNet-pc.jpg")
@@ -83,7 +84,7 @@ container#home
     .card
       .subTitle Ray Tracing - Photon Mapping
       .content.
-        Ray Tracing is a classical method for generating a physical based rendering scene.
+        Ray Tracing is a classical method for generating a physical based rendering scene. I write a physically based renderer by using ray tracing and path tracing to render a complicated scene.
       .imgBox
         .img.img-gap
           img(src="../../images/projects/raytracer/index2.png")
@@ -119,7 +120,7 @@ container#home
         .img
           img(src="../../images/projects/particles/cube1.png")
       .vm
-        router-link.view-more(to="/autopick") View More >>
+        a.view-more(href="https://drive.google.com/file/d/0B9mADRFvGc-qMDg0ZVZJa0p3Rnc/view", target="_blank") View More >>
     //- .card
     //-   .subTitle Spherical Gaussian Basic Function for PRT
     //- .card
@@ -168,6 +169,10 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.container
+  height 100vh
+  overflow scroll
+  padding 0 50px
 .img-gap
   padding-right 20px
 .backGray
@@ -222,8 +227,8 @@ table
     color #123
   .subTitle
     &::before
-      content "¶ "
-      color #627755
+      // content " ¶ "
+      color #62775
     font-weight bold
     font-size 22px
     padding-top 10px
@@ -232,6 +237,8 @@ table
     padding-bottom 10px
     color: #aaa
   .content
+    p
+      padding-bottom 20px
     padding 10px 0
     font-size 18px
   .ssTitle
