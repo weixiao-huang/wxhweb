@@ -38,8 +38,7 @@
       p Visiting Student Researcher
     .content
       p.
-        From October, 2015 - February, 2016, I worked at <a href="http://www.me.berkeley.edu/people/faculty/david-steigmann" target="_blank"> Prof. David Steigmann</a>'s Lab in Mechanical Engineering of <a href="http://www.berkeley.edu/" target="_blank">UC Berkeley.</a>
-
+        From October, 2015 - February, 2016, I worked at <a href="http://www.me.berkeley.edu/people/faculty/david-steigmann" target="_blank"> Prof. David Steigmann</a>'s Lab in Mechanical Engineering of <a href="http://www.berkeley.edu/" target="_blank">UC Berkeley.</a> My research topic was the numerical and theoretical analysis of problems in the mechanics of fiber-reinforced shells.
 
   .section#experiences
     .title.before Research Experiences
