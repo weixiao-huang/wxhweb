@@ -1,5 +1,5 @@
 <template lang="pug">
-nav(:style="{width: width + 'px'}")
+nav#nav
   .container
     .img
       img(src="../images/me.jpg")
@@ -62,7 +62,6 @@ export default {
 <style lang="stylus" scoped>
 div
   color #f3f3f3
-  font-family Arial, Times New Roman, Verdana, sans-serif;
 .name
   padding-top 40px
   p
@@ -76,7 +75,6 @@ nav
   height 100vh
   overflow scroll
   position absolute
-  background-color #23bbf3
   font-size 16px
   text-align center
   .container
@@ -108,4 +106,7 @@ a
   display block
   padding 15px 0
 
+@media only screen and (max-width 768px)
+  nav
+    height calc(100vh - 60px)
 </style>

@@ -45,4 +45,10 @@ export default {
   iframe
     width calc(100vw - 500px + 40px)
     height calc(9/16 * (100vw - 500px + 40px))
+
+@media only screen and (max-width 768px)
+  #tunet
+    iframe
+      width calc(100vw - 60px)
+      height calc(9/16 * (100vw - 60px))
 </style>

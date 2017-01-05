@@ -54,4 +54,19 @@ export default {
       iframe
         width calc((50vw - 250px + 20px) * 0.95)
         height calc(9/16 * (50vw - 250px + 20px) * 0.95)
+
+@media only screen and (max-width 768px)
+  iframe
+    width calc(100vw - 60px)
+    height calc(9/16 * (100vw - 60px))
+    padding 20px 0
+    margin-top -10px
+  .videos
+    padding-bottom 20px
+    margin-top -10px
+    .box
+      display inline-block
+      iframe
+        width calc((50vw - 40px))
+        height calc(9/16 * (50vw - 40px))
 </style>

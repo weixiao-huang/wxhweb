@@ -1,5 +1,5 @@
 <template lang="pug">
-#wrap(:style="{ marginLeft: width + 'px' }")
+#wrap
   transition(name="fade" mode="out-in")
     router-view.view
 </template>
@@ -24,5 +24,4 @@ export default {
 .fade-enter, .fade-leave-active
   opacity 0
   transform translate(-30px, 0)
-
 </style>

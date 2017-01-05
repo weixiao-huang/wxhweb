@@ -1,5 +1,5 @@
 <template lang="pug">
-.container#home
+#home
   .section#about
     .bigTitle Weixiao HUANG (黄维啸)
     .subTitle Tsinghua University
@@ -168,10 +168,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.container
-  height 100vh
-  overflow scroll
-  padding 0 50px
 .img-gap
   padding-right 20px
 .backGray
@@ -190,6 +186,9 @@ table
   th
     border-bottom 5px #ddd solid
 #home
+  height 100vh
+  overflow scroll
+  padding 0 50px
   .section
     background-color white
     margin 30px 0
@@ -253,4 +252,16 @@ table
     padding-top 10px
     text-align: center
     font-size 20px
+
+@media only screen and (max-width 768px)
+  #home
+    padding 0 15px
+    height calc(100vh - 60px)
+    .section
+      padding 20px
+      margin 15px 0
+    .box
+      iframe
+        width calc(100vw - 100px)
+        height calc(9/16 * (100vw - 100px))
 </style>
