@@ -81,9 +81,11 @@
   .section#projects
     .title Projects
     .card
-      .subTitle Ray Tracing - Photon Mapping
+      .subTitle Ray Tracing - Progressive Photon Mapping (PPM)
       .content.
-        Ray Tracing is a classical method for generating a physical based rendering scene. I write a physically based renderer by using ray tracing and path tracing to render a complicated scene.
+        p Ray Tracing is a classical method for generating a physical based rendering scene. I write a physically based renderer by using ray tracing and Progressive Photon Mapping(PPM) to render a complicated scene.
+      .code-link
+        a(href="https://github.com/ztxcydzz/RayTracer", target="_blank") [code]
       .imgBox
         .img.img-gap
           img(src="../../images/projects/raytracer/index2.png")
@@ -95,6 +97,8 @@
       .subTitle OpenGL Air Hockey Game
       .content.
         I developed an interesting game called <i>Air Hockey Game</i> by using OpenGL, in which you can control you own mallet to collide the puck for strike it into opposite's goal to win the game.
+      .code-link
+        a(href="https://github.com/ztxcydzz/Air-Hockey-Game", target="_blank") [code]
       .imgBox
         .img.img-gap
           img(src="../../images/projects/airhockey/index1.png")
@@ -129,6 +133,10 @@
       .content
         p I developed a mathematical method for solving the 8-Puzzle, which is a smaller case of the <a href="https://en.wikipedia.org/wiki/15_puzzle">15-puzzle</a>. Instead of using a search strategy, my methods is just origined from a mathematical case, which can be generalized into a global form for solving the (n^2-1)-Puzzle. And I write an interface in Fortran to solve the global case.
         p Also I write a UI using Java. In this small game, you can play it as well as let the program help you automatically solve it.
+      .code-link
+        a(href="https://github.com/ztxcydzz/n_orders", target="_blank") [code (Fortran Solver)]
+      .code-link
+        a(href="https://github.com/ztxcydzz/Recover", target="_blank") [code (Java Game)]
       img(width="100%", src="../../images/projects/8-puzzle/index.png")
       //- .vm
       //-   router-link.view-more(to="/eightpuzzle") View More >>
@@ -252,6 +260,15 @@ table
     padding-top 10px
     text-align: center
     font-size 20px
+  .code-link
+    display inline-block
+    font-size 22px
+    padding-bottom 15px
+    padding-right 10px
+    a
+      color #189
+      &:hover
+        color #1aa
 
 @media only screen and (max-width 768px)
   #home
