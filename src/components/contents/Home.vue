@@ -115,6 +115,7 @@
       .subContent Zhipeng Jia, Yuping Luo, Weixiao Huang
       .content.
         We developed a deep learning algorithm to Automatically pick the particles in the Cryo-EM by using a lot of reference datasets.
+      .code-link
       .imgBox
         .img.img-gap
           img(src="../../images/projects/particles/cal.png")
@@ -215,13 +216,13 @@ table
         width 100%
   a
     transition all 0.2s
-    color #666
+    color #177
     border-bottom 1px dotted #bbb
     &:hover
-      color #172
+      color #498
       border-bottom 1px dotted #fff
   .view-more
-    color #627758
+    color #2e9295
   .title
     border-left 20px solid #7559aa
     padding-left 20px
