@@ -2,7 +2,7 @@
 nav#nav
   .container
     .img
-      img(src="../images/me.jpg")
+      img(src="../images/me_small.jpg")
     .name
       p Weixiao Huang
       .sub <i>Innovation and Passion</i>
