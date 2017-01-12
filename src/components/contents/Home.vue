@@ -9,7 +9,7 @@
     .content
       p I received my Bachelor degree majoring Engineering Mechanics from School of Aerospace, Tsinghua University in July, 2016. I had been to University of California, Berkeley as a visiting scholar under the supervisor of <a href="http://www.me.berkeley.edu/people/faculty/david-steigmann" target="_blank">Prof. David Steigmann</a> of Mechanical Engineering.
       p I'm experienced at software developing, and led <a href="https://lab.mu/" target="_blank">Lab μ Student Geek Association</a> which create daily software products for convenient campus life for Tsinghua students.
-      p I show a great interest and passion in computer graphics and have oriented my research focus on it, especially in real-time rendering, physically based rendering and image processing. I've selected several related courses about it, such as Computer Graphics, Computer Graphics Real Time and Animation. During the recent months, I was doing some projects about Media Calculation, such as Image Filling, 3D Reconstructions from images etc. I have profound mathematical foundation, nearly all grades of my mathematics courses is over 90. And because my mechanics background, I believe I'm more professional in physics application than others. Currently I'm applying for graduate program in 2017 fall. Please fell free to <a href="mailto:hwx.simle@gmail.com">contact me</a> and <a href="https://drive.google.com/file/d/0B9mADRFvGc-qX0FHb3RJSXQyVk0/view" target="_blank">download my CV</a>.
+      p I show a great interest and passion in computer graphics and have oriented my research focus on it, especially in real-time rendering, physically based rendering and image processing. I've selected several related courses about it, such as Computer Graphics, Computer Graphics Real Time and Animation. During the recent months, I was doing some projects about Media Calculation, such as Image Filling, 3D Reconstructions from images etc. I have profound mathematical foundation, nearly all grades of my mathematics courses is over 90. And because my mechanics background, I believe I'm more professional in physics application than others. Currently I'm applying for graduate program in 2017 fall. Please fell free to <a href="mailto:hwx.simle@gmail.com">contact me</a> and <a href="https://drive.google.com/file/d/0B9mADRFvGc-qX0FHb3RJSXQyVk0/view?usp=sharing" target="_blank">download my CV</a>.
 
   .section#education
     .title.before Education
@@ -124,7 +124,7 @@
         .img
           img(src="../../images/projects/particles/cube1.png")
       .vm
-        a.view-more(href="https://drive.google.com/file/d/0B9mADRFvGc-qMDg0ZVZJa0p3Rnc/view", target="_blank") View More >>
+        a.view-more(href="https://drive.google.com/file/d/0B9mADRFvGc-qMDg0ZVZJa0p3Rnc/view?usp=sharing", target="_blank") View More >>
     //- .card
     //-   .subTitle Spherical Gaussian Basic Function for PRT
     //- .card
