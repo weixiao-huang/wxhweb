@@ -9,7 +9,7 @@
     .content
       p I received my Bachelor degree majoring Engineering Mechanics from School of Aerospace, Tsinghua University in July, 2016. I had been to University of California, Berkeley as a visiting scholar under the supervisor of <a href="http://www.me.berkeley.edu/people/faculty/david-steigmann" target="_blank">Prof. David Steigmann</a> of Mechanical Engineering.
       p I'm experienced at software developing, and led <a href="https://lab.mu/" target="_blank">Lab μ Student Geek Association</a> which create daily software products for convenient campus life for Tsinghua students.
-      p I show a great interest and passion in computer graphics and have oriented my research focus on it, especially in real-time rendering, physically based rendering and image processing. I've selected several related courses about it, such as Computer Graphics, Computer Graphics Real Time and Animation. During the recent months, I was doing some projects about Media Calculation, such as Image Filling, 3D Reconstructions from images etc. I have profound mathematical foundation, nearly all grades of my mathematics courses is over 90. And because my mechanics background, I believe I'm more professional in physics application than others. Currently I'm applying for graduate program in 2017 fall. Please fell free to <a href="mailto:hwx.simle@gmail.com">contact me</a> and <a href="https://drive.google.com/file/d/0B9mADRFvGc-qX0FHb3RJSXQyVk0/view?usp=sharing" target="_blank">download my CV</a>.
+      //- p I show a great interest and passion in Machine Learning, Computer Vision, Computer Graphics and have oriented my research focus on it. I've selected several related courses about it, such as Computational Biology, Computer Graphics, Computer Graphics Real Time and Animation. During the recent months, I was doing some projects about Media Calculation, such as Image Filling, 3D Reconstructions from images etc. I have profound mathematical foundation, nearly all grades of my mathematics courses is over 90. And because my mechanics background, I believe I'm more professional in physics application than others. Currently I'm applying for graduate program in 2017 fall. Please fell free to <a href="mailto:hwx.simle@gmail.com">contact me</a> and <a href="https://drive.google.com/file/d/0B9mADRFvGc-qX0FHb3RJSXQyVk0/view?usp=sharing" target="_blank">download my CV</a>.
 
   .section#education
     .title.before Education
@@ -85,7 +85,7 @@
       .content.
         p Ray Tracing is a classical method for generating a physical based rendering scene. I write a physically based renderer by using ray tracing and Progressive Photon Mapping(PPM) to render a complicated scene.
       .code-link
-        a(href="https://github.com/ztxcydzz/RayTracer", target="_blank") [code]
+        a(href="https://github.com/weixiao-huang/RayTracer", target="_blank") [code]
       .imgBox
         .img.img-gap
           img(src="../../images/projects/raytracer/index2.png")
@@ -98,7 +98,7 @@
       .content.
         I developed an interesting game called <i>Air Hockey Game</i> by using OpenGL, in which you can control you own mallet to collide the puck for strike it into opposite's goal to win the game.
       .code-link
-        a(href="https://github.com/ztxcydzz/Air-Hockey-Game", target="_blank") [code]
+        a(href="https://github.com/weixiao-huang/Air-Hockey-Game", target="_blank") [code]
       .imgBox
         .img.img-gap
           img(src="../../images/projects/airhockey/index1.png")
@@ -135,10 +135,17 @@
         p I developed a mathematical method for solving the 8-Puzzle, which is a smaller case of the <a href="https://en.wikipedia.org/wiki/15_puzzle">15-puzzle</a>. Instead of using a search strategy, my methods is just origined from a mathematical case, which can be generalized into a global form for solving the (n^2-1)-Puzzle. And I write an interface in Fortran to solve the global case.
         p Also I write a UI using Java. In this small game, you can play it as well as let the program help you automatically solve it.
       .code-link
-        a(href="https://github.com/ztxcydzz/n_orders", target="_blank") [code (Fortran Solver)]
+        a(href="https://github.com/weixiao-huang/n_orders", target="_blank") [code (Fortran Solver)]
       .code-link
-        a(href="https://github.com/ztxcydzz/Recover", target="_blank") [code (Java Game)]
+        a(href="https://github.com/weixiao-huang/Recover", target="_blank") [code (Java Game)]
       img(width="100%", src="../../images/projects/8-puzzle/index.png")
+    .card
+      .subTitle The official website of SAEPA
+      .content
+        p SAEPA (Student Association of Education Poverty Alleviation) is an influential association in Tsinghua University. This website is developed by <a href="https://vuejs.org" target="_blank">Vue.js 2.0</a>. For exploring more about SAEPA and this website, you can see <a href="saepa.org" target="_blank">saepa.org</a>
+      .code-link
+        a(href="https://github.com/weixiao-huang/saepa_website", target="_blank") [code]
+      img(width="100%", src="../../images/projects/saepa/saepa.png")
       //- .vm
       //-   router-link.view-more(to="/eightpuzzle") View More >>
 

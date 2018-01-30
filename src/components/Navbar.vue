@@ -13,7 +13,7 @@ nav#nav
             a(:href="item.src") {{ item.title }}
     footer
       .github
-        a(href="https://github.com/ztxcydzz")
+        a(href="https://github.com/weixiao-huang")
           img(src="../assets/github.svg")
       .email
         a(href="mailto:hwx.simle@gmail.com")
